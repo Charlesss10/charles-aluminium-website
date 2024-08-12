@@ -34,7 +34,7 @@ function Footer() {
                 <FooterBox className="quick-links">
                     <FooterTitle>Quick Links</FooterTitle>
                     <FooterLink to="/">Home</FooterLink>
-                    <FooterLink to="/about">About Us</FooterLink>
+                    <FooterLink to="/about">About</FooterLink>
                     <FooterLink to="/products">Products</FooterLink>
                     <FooterLink to="/services">Services</FooterLink>
                     <FooterLink to="/contact">Contact</FooterLink>

@@ -5,6 +5,7 @@ import heroImage from '../assets/heroImage.png';
 
 export const HeaderOuterContainer = styled.div`
   background: ${colors.white};
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 export const HeaderContainer = styled.header`
@@ -20,10 +21,10 @@ export const LogoLink = styled(Link)`
   display: flex
   align-items: center;
   margin-top: 10px;
-  margin-right: 50px; /* Space between logo and menu */
+  margin-left: 25px; /* Space between logo and menu */
 
   @media (max-width: 768px) {
-    margin-left: 0; /* Reduce or remove margin on smaller screens */
+    margin-left: 0px;
   }
 
 `;
@@ -38,7 +39,7 @@ export const NavBar = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  max-width: 1200px;
+  max-width: 1020px;
   margin: 0 auto;
   height: 80px; /* Adjust the height as needed */
 
@@ -135,11 +136,11 @@ export const HamburgerIcon = styled.div`
 
   @media (max-width: 768px) {
     display: block;
+    margin-right: 0;
   }
 `;
 
 export const HeroSection = styled.section`
-  width: 100%;
   height: 90vh;
   background-image: url(${heroImage});
   background-size: cover;

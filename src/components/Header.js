@@ -60,7 +60,7 @@ function Header() {
                 <NavLink to="/">Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/about">About Us</NavLink>
+                <NavLink to="/about">About</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/products">Products</NavLink>
@@ -79,7 +79,7 @@ function Header() {
                 <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/about" onClick={toggleMenu}>About Us</NavLink>
+                <NavLink to="/about" onClick={toggleMenu}>About</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/products" onClick={toggleMenu}>Products</NavLink>

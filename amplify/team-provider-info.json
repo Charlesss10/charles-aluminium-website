@@ -1,28 +1,36 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-charlesaluminium-dev-77008-authRole",
-      "UnauthRoleArn": "arn:aws:iam::637423598178:role/amplify-charlesaluminium-dev-77008-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::637423598178:role/amplify-charlesaluminium-dev-77008-authRole",
+      "AuthRoleName": "amplify-charlesaluminium-dev-bd34c-authRole",
+      "UnauthRoleArn": "arn:aws:iam::637423598178:role/amplify-charlesaluminium-dev-bd34c-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::637423598178:role/amplify-charlesaluminium-dev-bd34c-authRole",
       "Region": "eu-central-1",
-      "DeploymentBucketName": "amplify-charlesaluminium-dev-77008-deployment",
-      "UnauthRoleName": "amplify-charlesaluminium-dev-77008-unauthRole",
-      "StackName": "amplify-charlesaluminium-dev-77008",
-      "StackId": "arn:aws:cloudformation:eu-central-1:637423598178:stack/amplify-charlesaluminium-dev-77008/4f69c970-5193-11ef-ba3c-0a0b8bbe78bf",
-      "AmplifyAppId": "dxya3k2j1iuqq"
+      "DeploymentBucketName": "amplify-charlesaluminium-dev-bd34c-deployment",
+      "UnauthRoleName": "amplify-charlesaluminium-dev-bd34c-unauthRole",
+      "StackName": "amplify-charlesaluminium-dev-bd34c",
+      "StackId": "arn:aws:cloudformation:eu-central-1:637423598178:stack/amplify-charlesaluminium-dev-bd34c/95493fb0-58e7-11ef-99bf-0a1436a1dbd1",
+      "AmplifyAppId": "d1fu3zajkw0cpb"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1fu3zajkw0cpb",
+          "type": "manual"
+        }
+      }
     }
   },
   "main": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-charlesaluminium-main-fccec-authRole",
-      "UnauthRoleArn": "arn:aws:iam::637423598178:role/amplify-charlesaluminium-main-fccec-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::637423598178:role/amplify-charlesaluminium-main-fccec-authRole",
+      "AuthRoleName": "amplify-charlesaluminium-main-6c9ba-authRole",
+      "UnauthRoleArn": "arn:aws:iam::637423598178:role/amplify-charlesaluminium-main-6c9ba-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::637423598178:role/amplify-charlesaluminium-main-6c9ba-authRole",
       "Region": "eu-central-1",
-      "DeploymentBucketName": "amplify-charlesaluminium-main-fccec-deployment",
-      "UnauthRoleName": "amplify-charlesaluminium-main-fccec-unauthRole",
-      "StackName": "amplify-charlesaluminium-main-fccec",
-      "StackId": "arn:aws:cloudformation:eu-central-1:637423598178:stack/amplify-charlesaluminium-main-fccec/f128ccc0-5193-11ef-af49-0243cecbce21",
-      "AmplifyAppId": "dxya3k2j1iuqq"
+      "DeploymentBucketName": "amplify-charlesaluminium-main-6c9ba-deployment",
+      "UnauthRoleName": "amplify-charlesaluminium-main-6c9ba-unauthRole",
+      "StackName": "amplify-charlesaluminium-main-6c9ba",
+      "StackId": "arn:aws:cloudformation:eu-central-1:637423598178:stack/amplify-charlesaluminium-main-6c9ba/fc2aaa50-58ee-11ef-bf5e-02dfc6e07647",
+      "AmplifyAppId": "d1fu3zajkw0cpb"
     }
   }
 }
