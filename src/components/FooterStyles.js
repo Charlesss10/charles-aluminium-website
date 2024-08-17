@@ -11,6 +11,7 @@ export const FooterContainer = styled.footer`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
   gap: 40px; 
   padding: 40px; 
+  padding-bottom: 80px; /* Add extra padding to prevent overlap */
   background: ${colors.footerBlack};
   margin-top: 50px;
   max-width: 1200px; // Added max-width to control the footer width
@@ -20,16 +21,27 @@ export const FooterContainer = styled.footer`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     padding: 20px; 
+    padding-bottom: 60px; /* Ensure footer bottom is not covered */
   }
 `;
 
 export const FooterBox = styled.div`
   color: ${colors.gray};
 
-  &.head-office, &.follow-us, &.quick-links {
+  &.head-office, &.quick-links {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  &.follow-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+      @media (max-width: 768px) {
+    display: none; /* Hide social icons on mobile */
+  }
   }
 
   a {
@@ -75,4 +87,32 @@ export const SocialIconContainer = styled.div`
   gap: 30px;
   justify-content: center;
   margin-top: 20px;
+
+    @media (max-width: 768px) {
+    display: none; /* Hide social icons on mobile */
+  }
+`;
+
+export const FooterSignature = styled.div`
+  text-align: center;
+  color: ${colors.gray};
+  font-size: 14px;
+  margin-top: 20px;
+  padding: 15px 0;
+  background-color: ${colors.black};
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+
+  a {
+    color: ${colors.gray}; // Link color
+    text-decoration: none;
+
+    &:hover {
+      color: ${colors.white}; // Color on hover
+    }
+  }
 `;
