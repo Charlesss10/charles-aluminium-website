@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { FooterOuterContainer, FooterContainer, FooterBox, FooterTitle, FooterLink, SocialIcon, SocialIconContainer } from './FooterStyles';
+import { FooterOuterContainer, FooterContainer, FooterBox, FooterTitle, FooterLink, SocialIcon, SocialIconContainer, FooterSignature } from './FooterStyles';
 
 function Footer() {
     return (
@@ -55,6 +55,10 @@ function Footer() {
                     </SocialIconContainer>
                 </FooterBox>
             </FooterContainer>
+
+            <FooterSignature>
+                © Charles Aluminium Designed by <a href="https://www.linkedin.com/in/charles-eboson/" target="_blank" rel="noopener noreferrer">Charless10</a>
+            </FooterSignature>
         </FooterOuterContainer>
     );
 }

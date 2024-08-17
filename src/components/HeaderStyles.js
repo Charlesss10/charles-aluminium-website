@@ -98,6 +98,23 @@ export const NavLink = styled(Link)`
 
 `;
 
+// Hamburger icon style for mobile
+export const HamburgerIcon = styled.div`
+  display: none;
+  cursor: pointer;
+  color: ${colors.gray};
+
+  svg {
+    width: 25px; /* Adjust icon size */
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+    margin-right: 0;
+  }
+`;
+
 // Sidebar style for mobile navigation
 export const MobileNavMenu = styled.div`
   position: fixed;
@@ -123,21 +140,25 @@ export const MobileNavMenu = styled.div`
 
 `;
 
-// Hamburger icon style for mobile
-export const HamburgerIcon = styled.div`
-  display: none;
-  cursor: pointer;
-  color: ${colors.gray};
+export const SocialIcon = styled.a`
+  text-decoration: none;
+  color: ${colors.darkGray};
+  height: '100px';
 
   svg {
-    width: 25px; /* Adjust icon size */
-    height: auto;
+    margin: 0;
   }
 
-  @media (max-width: 768px) {
-    display: block;
-    margin-right: 0;
+    svg {
+    height: 25px; // Adjust the height of the icon
   }
+`;
+
+export const SocialIconContainer = styled.div`
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
 `;
 
 export const HeroSection = styled.section`

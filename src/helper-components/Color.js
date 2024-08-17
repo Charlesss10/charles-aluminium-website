@@ -3,7 +3,8 @@ const colors = {
     black: 'black',
     white: '#ffffff',
     gray: 'gray',
-    footerBlack: '#1e1e1e',
+    darkGray: '#333333',
+    footerBlack: '#1e1e1e'
   };
   
   export default colors;

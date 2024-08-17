@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../assets/logo.png';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import {
   HeaderOuterContainer,
   HeaderContainer,
@@ -12,6 +13,8 @@ import {
   NavLink,
   MobileNavMenu,
   HamburgerIcon,
+  SocialIconContainer,
+  SocialIcon,
   HeroSection,
   HeroContent,
   HeroButton,
@@ -90,6 +93,18 @@ function Header() {
               <NavItem>
                 <NavLink to="/contact" onClick={toggleMenu}>Contact</NavLink>
               </NavItem>
+
+              <SocialIconContainer>
+                <SocialIcon href="https://www.facebook.com/p/Charles-Aluminium-100064226793845/" target="_blank">
+                  <FaFacebook size={24} />
+                </SocialIcon>
+                <SocialIcon href="https://www.instagram.com/charles_aluminium_company/" target="_blank">
+                  <FaInstagram size={24} />
+                </SocialIcon>
+                <SocialIcon href="https://www.linkedin.com/company/charles-aluminium/about/" target="_blank">
+                  <FaLinkedin size={24} />
+                </SocialIcon>
+              </SocialIconContainer>
             </MobileNavMenu>
 
           </NavBar>
