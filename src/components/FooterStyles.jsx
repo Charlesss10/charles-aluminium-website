@@ -39,7 +39,7 @@ export const FooterBox = styled.div`
     flex-direction: column;
     align-items: center;
 
-      @media (max-width: 768px) {
+    @media (max-width: 768px) {
     display: none; /* Hide social icons on mobile */
   }
   }
@@ -61,6 +61,11 @@ export const FooterTitle = styled.h3`
   text-align: center;
   border-bottom: 2px solid ${colors.lightBlue};
   padding-bottom: 10px; /* Adds some spacing between the text and the line */
+
+    @media (max-width: 768px) {
+    width: 100%;
+    padding-left: 0;
+  }
 `;
 
 export const FooterLink = styled(Link)`

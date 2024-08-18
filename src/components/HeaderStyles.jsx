@@ -1,5 +1,5 @@
 import colors from '../helper-components/Color';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
 import heroImage from '../assets/heroImage.png';
 
@@ -197,37 +197,123 @@ export const HeroSection = styled.section`
   }
 `;
 
+// Define the floating animation
+const floatIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Adjust the value for the direction of the float */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+// Apply the animation to HeroContent
 export const HeroContent = styled.div`
   z-index: 2;
   max-width: 800px;
   padding: 20px;
   color: ${colors.white};
-`;
+  text-align: center;
+  animation: ${floatIn} 1s ease-out forwards; /* Ensure final state is retained */
 
-export const HeroButton = styled.a`
-  display: inline-block;
-  padding: 5px 13px;
-  font-size: 13px;
-  font-weight: 400;
-  color: ${colors.black};
-  background-color: ${colors.lightBlue}; //Color Name: Medium Turquoise
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-
-  &:hover {
-    background-color: ${colors.gray};
+  /* Delay child elements for staggered animation */
+  > * {
+    opacity: 0; /* Start invisible */
+    animation: ${floatIn} 1s ease-out forwards;
   }
 `;
 
 export const WelcomeTextHeader = styled.h1`
   font-size: 36px;
+  margin-bottom: 20px;
+  animation-delay: 0.2s; /* Delayed animation start */
 `;
 
 export const WelcomeText = styled.p`
   font-size: 14px;
   margin-top: -10px;
+  animation-delay: 0.4s; /* Further delayed animation start */
 `;
+
+export const HeroButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  animation-delay: 0.6s; /* Further delayed animation start */
+
+   @media (max-width: 768px) {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    gap: 10px; /* Adjust spacing between buttons on mobile */
+  }
+`;
+
+export const HeroProductsButton = styled.a`
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: ${colors.black};
+  background-color: ${colors.lightBlue};
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation-delay: 0.8s; /* Further delayed animation start */
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: ${colors.gray};
+  }
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+`;
+
+export const HeroQuoteButton = styled.a`
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: ${colors.black};
+  background-color: ${colors.lightBlue};
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation-delay: 1s; /* Further delayed animation start */
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: ${colors.gray};
+  }
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 768px) {
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+`;
+
+
 

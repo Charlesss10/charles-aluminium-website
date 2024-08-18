@@ -17,9 +17,11 @@ import {
   SocialIcon,
   HeroSection,
   HeroContent,
-  HeroButton,
   WelcomeTextHeader,
-  WelcomeText
+  WelcomeText,
+  HeroButtonContainer,
+  HeroProductsButton,
+  HeroQuoteButton
 } from './HeaderStyles'; // Adjust the import path as needed
 
 function Header() {
@@ -115,7 +117,10 @@ function Header() {
         <HeroContent>
           <WelcomeTextHeader>Welcome to Charles Aluminium</WelcomeTextHeader>
           <WelcomeText>Your Partner in Quality Aluminium Products and Nigeria's Leading Roofing Experts. Quality, durability, and excellence in every project.</WelcomeText>
-          <HeroButton href="/about">Read More</HeroButton>
+          <HeroButtonContainer>
+            <HeroProductsButton href="/products">Explore our Products </HeroProductsButton>
+            <HeroQuoteButton href="/get-a-quote">Get a Quote </HeroQuoteButton>
+          </HeroButtonContainer>
         </HeroContent>
       </HeroSection>
       <hr />
