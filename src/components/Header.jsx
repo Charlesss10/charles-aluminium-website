@@ -14,15 +14,8 @@ import {
   MobileNavMenu,
   HamburgerIcon,
   SocialIconContainer,
-  SocialIcon,
-  HeroSection,
-  HeroContent,
-  WelcomeTextHeader,
-  WelcomeText,
-  HeroButtonContainer,
-  HeroProductsButton,
-  HeroQuoteButton
-} from './HeaderStyles'; // Adjust the import path as needed
+  SocialIcon
+} from './components-styles/HeaderStyles';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -108,22 +101,10 @@ function Header() {
                 </SocialIcon>
               </SocialIconContainer>
             </MobileNavMenu>
+          </NavBar>   
 
-          </NavBar>
         </HeaderContainer>
       </HeaderOuterContainer>
-
-      <HeroSection>
-        <HeroContent>
-          <WelcomeTextHeader>Welcome to Charles Aluminium</WelcomeTextHeader>
-          <WelcomeText>Your Partner in Quality Aluminium Products and Nigeria's Leading Roofing Experts. Quality, durability, and excellence in every project.</WelcomeText>
-          <HeroButtonContainer>
-            <HeroProductsButton href="/products">Explore our Products </HeroProductsButton>
-            <HeroQuoteButton href="/get-a-quote">Get a Quote </HeroQuoteButton>
-          </HeroButtonContainer>
-        </HeroContent>
-      </HeroSection>
-      <hr />
     </>
   );
 }

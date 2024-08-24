@@ -1,9 +1,9 @@
-import colors from '../helper-components/Color';
+import colors from '../../helper-components/Color';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const FooterOuterContainer = styled.div`
-  background: ${colors.footerBlack};
+  background-color: ${colors.footerBlack};
 `;
 
 export const FooterContainer = styled.footer`
@@ -12,16 +12,18 @@ export const FooterContainer = styled.footer`
   gap: 40px; 
   padding: 40px; 
   padding-bottom: 80px; /* Add extra padding to prevent overlap */
-  background: ${colors.footerBlack};
+  background-color: ${colors.footerBlack};
   margin-top: 50px;
   max-width: 1200px; // Added max-width to control the footer width
+  height: 250px;
   margin-left: auto; // Center the footer horizontally
   margin-right: auto; // Center the footer horizontally
   
-  @media (max-width: 768px) {
+   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     padding: 20px; 
     padding-bottom: 60px; /* Ensure footer bottom is not covered */
+    height: auto;
   }
 `;
 
@@ -32,7 +34,13 @@ export const FooterBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+      @media (max-width: 768px) {
+      align-items: flex-start;
+      padding: 0 10px;
+    }
   }
+
 
   &.follow-us {
     display: flex;
@@ -63,7 +71,8 @@ export const FooterTitle = styled.h3`
   padding-bottom: 10px; /* Adds some spacing between the text and the line */
 
     @media (max-width: 768px) {
-    width: 100%;
+    text-align: left;
+    width: 90%;
     padding-left: 0;
   }
 `;
@@ -93,7 +102,7 @@ export const SocialIconContainer = styled.div`
   justify-content: center;
   margin-top: 20px;
 
-    @media (max-width: 768px) {
+   @media (max-width: 768px) {
     display: none; /* Hide social icons on mobile */
   }
 `;
@@ -106,7 +115,7 @@ export const FooterSignature = styled.div`
   padding: 15px 0;
   background-color: ${colors.black};
 
-  @media (max-width: 768px) {
+   @media (max-width: 768px) {
     font-size: 12px;
     margin-top: 10px;
     padding: 10px 0;
