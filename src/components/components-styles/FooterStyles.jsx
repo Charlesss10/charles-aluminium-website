@@ -67,7 +67,7 @@ export const FooterTitle = styled.h3`
   margin: 20px 0;
   color: ${colors.white};
   text-align: center;
-  border-bottom: 2px solid ${colors.lightBlue};
+  border-bottom: 1px solid ${colors.lightBlue};
   padding-bottom: 10px; /* Adds some spacing between the text and the line */
 
     @media (max-width: 768px) {
@@ -113,7 +113,7 @@ export const FooterSignature = styled.div`
   font-size: 14px;
   margin-top: 20px;
   padding: 15px 0;
-  background-color: ${colors.black};
+  background-color: rgba(0, 0, 0, 0.1);
 
    @media (max-width: 768px) {
     font-size: 12px;
