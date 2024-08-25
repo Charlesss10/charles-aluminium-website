@@ -48,7 +48,7 @@ export const AboutContent = styled.div`
 export const AboutText = styled.div`
   flex: 1; /* Takes up half the width of the container */
   text-align: left; /* Align text to the left */
-  line-height: 2;
+  line-height: 1.5;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -59,7 +59,7 @@ export const AboutImageContainer = styled.div`
   flex: 1; /* Takes up half the width of the container */
   display: flex;
   flex-direction: column;
-  margin-top: 25px;
+  margin-top: 22px;
   gap: 20px;
 
   @media (max-width: 768px) {
@@ -72,32 +72,33 @@ export const AboutImage = styled.img`
   width: 100%;
   height: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow to the image */
-
 `;
 
 export const MissionStatement = styled.div`
-  background-color: ${colors.lightGray};
+  background-color: rgba(191, 242, 241, 0.2);
   padding: 20px;
   margin: 40px 0;
   text-align: center;
+  line-height: 1.5;
   color: ${colors.darkGray};
 
     @media (max-width: 768px) {
     text-align: left; /* Align text to the left */
-    padding: 0 10px;  /* Add padding to the sides */
+    padding: 10px 30px;  /* Add padding to the sides */
   }
 `;
 
 export const VisionStatement = styled.div`
-  background-color: ${colors.lightGray};
+  background-color: rgba(191, 242, 241, 0.2);
   padding: 20px;
   margin: 40px 0;
   text-align: center;
+  line-height: 1.5;
   color: ${colors.darkGray};
 
     @media (max-width: 768px) {
     text-align: left; /* Align text to the left */
-    padding: 0 10px;  /* Add padding to the sides */
+    padding: 10px 30px;  /* Add padding to the sides */
   }
 `;
 
@@ -116,6 +117,7 @@ export const Value = styled.div`
   flex: 1;
   padding: 20px;
   text-align: center;
+  line-height: 1.5;
   color: ${colors.darkGray};
 
     @media (max-width: 768px) {
@@ -125,34 +127,39 @@ export const Value = styled.div`
 `;
 
 export const TeamContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin: 40px 0;
-  color: ${colors.darkGray};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
 
-    @media (max-width: 768px) {
-    text-align: left; /* Align text to the left */
-    padding: 0 10px;  /* Add padding to the sides */
+  img {
+    width: 150px; /* Adjust the size as needed */
+    height: auto;
+  }
+
+    @media (min-width: 768px) {
+    img {
+      width: 120px;
+    }
   }
 `;
 
 export const CTASection = styled.div`
-  background-color: ${colors.lightBlue};
-  color: ${colors.darkGray};
+  background-color: rgba(0, 0, 0, 0.8);
+  color: ${colors.white};
   text-align: center;
   padding: 20px;
   margin: 40px 0;
 `;
 
 export const CTASectionLink = styled(Link)`
-  color: ${colors.darkGray};
+  color: rgb(240, 240, 240);
   text-decoration: none;
   position: relative;
   padding: 5px 0;
   text-align: center;
 
   &:hover {
-    color: ${colors.white};
+    color: ${colors.gray};
   }
 `

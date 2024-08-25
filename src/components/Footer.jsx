@@ -69,7 +69,7 @@ function Footer() {
             </FooterContainer>
 
             <FooterSignature>
-                © Charles Aluminium Designed by <a href="https://www.linkedin.com/in/charles-eboson/" target="_blank" rel="noopener noreferrer">Charless10</a>
+                © 2024 Charles Aluminium Designed by <a href="https://www.linkedin.com/in/charles-eboson/" target="_blank" rel="noopener noreferrer">Charless10</a>.
             </FooterSignature>
 
         </FooterOuterContainer>
