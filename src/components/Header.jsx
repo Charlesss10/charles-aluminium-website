@@ -3,7 +3,6 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../assets/logo.png';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import {
-  HeaderOuterContainer,
   HeaderContainer,
   LogoLink,
   LogoImage,
@@ -42,7 +41,6 @@ function Header() {
 
   return (
     <>
-      <HeaderOuterContainer>
         <HeaderContainer>
 
           <NavBar>
@@ -104,7 +102,6 @@ function Header() {
           </NavBar>   
 
         </HeaderContainer>
-      </HeaderOuterContainer>
     </>
   );
 }

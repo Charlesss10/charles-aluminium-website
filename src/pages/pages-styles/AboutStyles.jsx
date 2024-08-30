@@ -83,7 +83,7 @@ export const MissionStatement = styled.div`
   color: ${colors.darkGray};
 
     @media (max-width: 768px) {
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Align text to the left */
     padding: 10px 30px;  /* Add padding to the sides */
   }
 `;
@@ -97,7 +97,7 @@ export const VisionStatement = styled.div`
   color: ${colors.darkGray};
 
     @media (max-width: 768px) {
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Align text to the left */
     padding: 10px 30px;  /* Add padding to the sides */
   }
 `;

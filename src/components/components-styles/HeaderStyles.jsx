@@ -2,12 +2,6 @@ import colors from '../../helper-components/Color';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-
-export const HeaderOuterContainer = styled.div`
-  background: ${colors.white};
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-`;
-
 export const HeaderContainer = styled.header`
   position: sticky;
   top: 0;
@@ -96,6 +90,14 @@ export const NavLink = styled(Link)`
     width: 100%;
   }
 
+    @media (max-width: 768px) {
+    &::after {
+      transition: none;
+      width: 0;
+      height: 0; 
+  }
+}
+
 `;
 
 export const HamburgerIcon = styled.div`
@@ -133,8 +135,15 @@ export const MobileNavMenu = styled.div`
   border-top: 5px solid ${colors.lightBlue};
   z-index: 1001; /* Ensure sidebar is above other content */
 
+  ${NavLink} {
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
   ${NavItem} {
     margin: 15px 0;  // Adjust vertical spacing between items
+    width: 90%;
   }
 
 `;
@@ -150,6 +159,10 @@ export const SocialIcon = styled.a`
 
     svg {
     height: 25px; // Adjust the height of the icon
+  }
+
+    &:hover {
+    color: ${colors.gray};
   }
 `;
 
