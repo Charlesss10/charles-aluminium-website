@@ -94,7 +94,6 @@ export const HeroProductsButton = styled.a`
   display: inline-block;
   padding: 8px 20px;
   font-size: 16px;
-  font-weight: 600;
   color: ${colors.black};
   background-color: ${colors.lightBlue};
   border: none;
@@ -126,7 +125,6 @@ export const HeroQuoteButton = styled.a`
   display: inline-block;
   padding: 8px 20px;
   font-size: 16px;
-  font-weight: 600;
   color: ${colors.black};
   background-color: ${colors.lightBlue};
   border: none;
