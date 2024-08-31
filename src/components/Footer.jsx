@@ -1,14 +1,14 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { 
-FooterOuterContainer, 
-FooterContainer, 
-FooterBox, 
-FooterTitle, 
-FooterLink, 
-SocialIcon, 
-SocialIconContainer, 
-FooterSignature 
+import { FaFacebook, FaInstagram, FaLinkedin, FaPhone, FaEnvelope } from 'react-icons/fa';
+import {
+    FooterOuterContainer,
+    FooterContainer,
+    FooterBox,
+    FooterTitle,
+    FooterLink,
+    SocialIcon,
+    SocialIconContainer,
+    FooterSignature
 } from './components-styles/FooterStyles';
 
 function Footer() {
@@ -19,36 +19,33 @@ function Footer() {
                 <FooterBox className="head-office">
                     <FooterTitle>Head Office</FooterTitle>
                     <div className="icon-text">
-                        <div>Km. 18, Rumuokoro</div>
-                    </div>
-                    <div>Airport Road, Igwuruta</div>
-                    <div>Port Harcourt, Rivers State</div>
-                    <div>Nigeria</div>
-
-                    <div className="icon-text">
-                        <p>Phone: +234 80 3407 0479</p>
+                        <p>
+                            <div>Km 18, Rumuokoro, Airport Road,</div>
+                            <div>Igwuruta, Port Harcourt,</div>
+                            <div>Rivers State, Nigeria</div>
+                        </p>
                     </div>
 
-                    <div className="icon-text">
-                        <div>
-                            Email:
-                            <a href="mailto:cigbojionu12@yahoo.com"> cigbojionu12@yahoo.com</a>
-                        </div>
+                    <div className="reachOut">
+                        <p><FaPhone size={20} /> +234 80 3407 0479 </p>
+                        <p><FaEnvelope size={20} /> <a href="mailto:cigbojionu12@yahoo.com"> cigbojionu12@yahoo.com</a></p>
                     </div>
 
-                    <p className="icon-text">
+                    <p>
                         <div>Mon - Fri: 8:00AM - 5:00PM</div>
                         <div>Sat: 8:00AM - 2:00PM</div>
                     </p>
                 </FooterBox>
-                
+
                 <FooterBox className="quick-links">
                     <FooterTitle>Quick Links</FooterTitle>
-                    <FooterLink to="/">Home</FooterLink>
-                    <FooterLink to="/about">About</FooterLink>
-                    <FooterLink to="/products">Products</FooterLink>
-                    <FooterLink to="/services">Services</FooterLink>
-                    <FooterLink to="/contact">Contact</FooterLink>
+                    <p>
+                        <FooterLink to="/">Home</FooterLink>
+                        <FooterLink to="/about">About</FooterLink>
+                        <FooterLink to="/products">Products</FooterLink>
+                        <FooterLink to="/services">Services</FooterLink>
+                        <FooterLink to="/contact">Contact</FooterLink>
+                    </p>
                 </FooterBox>
 
                 <FooterBox className="follow-us">
@@ -63,7 +60,7 @@ function Footer() {
                         <SocialIcon href="https://www.linkedin.com/company/charles-aluminium/about/" target="_blank">
                             <FaLinkedin size={24} />
                         </SocialIcon>
-                    </SocialIconContainer>                
+                    </SocialIconContainer>
                 </FooterBox>
 
             </FooterContainer>

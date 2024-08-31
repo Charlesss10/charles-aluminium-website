@@ -11,17 +11,16 @@ export const FooterContainer = styled.footer`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
   gap: 40px; 
   padding: 40px; 
-  padding-bottom: 80px; /* Add extra padding to prevent overlap */
   background-color: ${colors.footerBlack};
   margin-top: 50px;
-  max-width: 1200px; // Added max-width to control the footer width
-  height: 250px;
+  max-width: 1060px;
+  height: 300px;
   margin-left: auto; // Center the footer horizontally
   margin-right: auto; // Center the footer horizontally
   
    @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    padding: 20px; 
+    padding: 50px; 
     padding-bottom: 60px; /* Ensure footer bottom is not covered */
     height: auto;
   }
@@ -30,10 +29,24 @@ export const FooterContainer = styled.footer`
 export const FooterBox = styled.div`
   color: ${colors.gray};
 
-  &.head-office, &.quick-links {
+  &.head-office {
     display: flex;
     flex-direction: column;
-    align-items: center;
+
+      @media (max-width: 768px) {
+      align-items: flex-start;
+      padding: 0 10px;
+    }
+  }
+
+  &.quick-links {
+    display: flex;
+    flex-direction: column;
+
+    p {
+    display: grid;
+    color: ${colors.gray};
+    }
 
       @media (max-width: 768px) {
       align-items: flex-start;
@@ -45,7 +58,6 @@ export const FooterBox = styled.div`
   &.follow-us {
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     @media (max-width: 768px) {
     display: none; /* Hide social icons on mobile */
@@ -60,13 +72,32 @@ export const FooterBox = styled.div`
       color: ${colors.white};
     }
   }
+
+.reachOut{
+    h2 {
+    color: ${colors.darkGray};
+  }
+    p {
+    display: flex;
+    margin: 10px 0;
+    gap: 10px;
+    color: ${colors.gray};
+
+    a {
+    color: ${colors.gray};
+    text-decoration: none;
+
+     &:hover {
+     color: ${colors.white};
+     }
+    }
+  }
 `;
 
 export const FooterTitle = styled.h3`
   font-size: 25px;
   margin: 20px 0;
   color: ${colors.white};
-  text-align: center;
   border-bottom: 1px solid ${colors.lightBlue};
   padding-bottom: 10px; /* Adds some spacing between the text and the line */
 
@@ -81,7 +112,6 @@ export const FooterLink = styled(Link)`
   text-decoration: none;
   position: relative;
   padding: 5px 0;
-  text-align: center;
 
   &:hover {
     color: ${colors.white};
@@ -99,7 +129,6 @@ export const SocialIcon = styled.a`
 export const SocialIconContainer = styled.div`
   display: flex;
   gap: 30px;
-  justify-content: center;
   margin-top: 20px;
 
    @media (max-width: 768px) {

@@ -1,13 +1,14 @@
 import React from 'react';
+import heroImage from '../assets/heroImage.png';
+import CEO from '../assets/CEO.png';
 import {
   AboutPageContainer,
-  ContentWrapper,
-  AboutContainer,
-  AboutTitle,
-  AboutContent,
-  AboutText,
-  AboutImageContainer,
-  AboutImage,
+  WhoWeAreContainer,
+  WhoWeAreTitle,
+  WhoWeAreContent,
+  WhoWeAreText,
+  WhoWeAreImageContainer,
+  WhoWeAreImage,
   MissionStatement,
   VisionStatement,
   ValuesContainer,
@@ -16,19 +17,16 @@ import {
   CTASection,
   CTASectionLink
 } from './pages-styles/AboutStyles';
-import heroImage from '../assets/heroImage.png';
-import CEO from '../assets/CEO.png';
 
 function About() {
   
   return (
     <AboutPageContainer>
-      <ContentWrapper>
 
-        <AboutContainer>
-          <AboutTitle>Who We Are</AboutTitle>
-          <AboutContent>
-            <AboutText>
+        <WhoWeAreContainer>
+          <WhoWeAreTitle>WHO WE ARE</WhoWeAreTitle>
+          <WhoWeAreContent>
+            <WhoWeAreText>
               <p>
                 We are Charles Aluminium, a premier supplier of roofing sheets and roofing felt,
                 headquartered in Rivers State with multiple branches throughout Nigeria.
@@ -49,30 +47,31 @@ function About() {
                 market expansions, partnerships, awards, etc.].
                 Through it all, we have remained committed to quality, customer satisfaction.
               </p>
-            </AboutText>
-            <AboutImageContainer>
-              <AboutImage src={heroImage} alt="About us" />
-            </AboutImageContainer>
-          </AboutContent>
-        </AboutContainer>
+            </WhoWeAreText>
+            <WhoWeAreImageContainer>
+              <WhoWeAreImage src={heroImage} alt="About us" />
+            </WhoWeAreImageContainer>
+          </WhoWeAreContent>
+        </WhoWeAreContainer>
 
         <MissionStatement>
-          <h2>Our Mission</h2>
+          <h2>OUR MISSION</h2>
           <p>"At Charles Aluminium, our mission is to [state your mission clearly].
             We believe in [mention key values or philosophies, such as integrity, customer satisfaction, innovation, etc.].
             Our goal is to [describe what you aim to achieve for your customers, employees, and the broader community]."</p>
         </MissionStatement>
 
         <VisionStatement>
-          <h2>Our Vision</h2>
+          <h2>OUR VISION</h2>
           <p>"Our vision is to [describe your company's long-term goals or vision].
             We aspire to [mention any long-term aspirations, such as becoming a market leader, driving innovation, improving customer experiences, etc.].
             By [mention how you plan to achieve this vision, e.g., continuously improving our products, embracing cutting-edge technology, etc.],
             we aim to [mention the impact you hope to have on your industry or community]."</p>
         </VisionStatement>
 
-        <ValuesContainer>
 
+        <h2>OUR VALUES</h2>
+        <ValuesContainer>
           <Value>
             <h3>Quality</h3>
             <p>We take pride in delivering high-quality products and services that stand the test of time.</p>
@@ -85,7 +84,6 @@ function About() {
             <h3>Integrity</h3>
             <p>We uphold the highest standards of integrity in all our actions</p>
           </Value>
-
         </ValuesContainer>
 
         <TeamContainer>
@@ -99,7 +97,6 @@ function About() {
           <CTASectionLink to="/contact">Get in Touch</CTASectionLink>
         </CTASection>
 
-      </ContentWrapper>
     </AboutPageContainer>
   );
 }
