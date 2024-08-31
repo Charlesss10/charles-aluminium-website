@@ -26,7 +26,7 @@ function Header() {
   // UseEffect to close the menu when resizing the screen
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768) { // Adjust the width as per your design
+      if (window.innerWidth > 768) {
         setMenuOpen(false);
       }
     };
