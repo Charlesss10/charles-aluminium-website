@@ -5,10 +5,10 @@ import {
     FooterContainer,
     FooterBox,
     FooterTitle,
-    FooterLink,
     SocialIcon,
     SocialIconContainer,
-    FooterSignature
+    FooterSignature,
+    NavLink
 } from './components-styles/FooterStyles';
 
 function Footer() {
@@ -18,7 +18,7 @@ function Footer() {
 
                 <FooterBox className="head-office">
                     <FooterTitle>Head Office</FooterTitle>
-                    <div className="icon-text">
+                    <div>
                         <p>
                             <div>Km 18, Rumuokoro, Airport Road,</div>
                             <div>Igwuruta, Port Harcourt,</div>
@@ -39,13 +39,13 @@ function Footer() {
 
                 <FooterBox className="quick-links">
                     <FooterTitle>Quick Links</FooterTitle>
-                    <p>
-                        <FooterLink to="/">Home</FooterLink>
-                        <FooterLink to="/about">About</FooterLink>
-                        <FooterLink to="/products">Products</FooterLink>
-                        <FooterLink to="/services">Services</FooterLink>
-                        <FooterLink to="/contact">Contact</FooterLink>
-                    </p>
+                        <p> 
+                        <div><NavLink to="/">Home</NavLink> </div>
+                        <div><NavLink to="/about">About</NavLink></div>
+                        <div><NavLink to="/products">Products</NavLink></div>
+                        <div><NavLink to="/services">Services</NavLink></div>
+                        <div><NavLink to="/contact">Contact</NavLink></div>
+                        </p>
                 </FooterBox>
 
                 <FooterBox className="follow-us">

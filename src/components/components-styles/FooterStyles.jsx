@@ -26,54 +26,47 @@ export const FooterContainer = styled.footer`
   }
 `;
 
+export const NavLink = styled(Link)`
+  color: ${colors.gray};
+  text-decoration: none;
+
+    &:hover {
+      color: ${colors.white};
+    }
+
+    @media (max-width: 768px){
+     display: block; 
+     width: 100%;
+    }
+`;
+
 export const FooterBox = styled.div`
   color: ${colors.gray};
 
   &.head-office {
     display: flex;
     flex-direction: column;
-
-      @media (max-width: 768px) {
-      align-items: flex-start;
-      padding: 0 10px;
-    }
   }
 
   &.quick-links {
     display: flex;
     flex-direction: column;
 
-    p {
-    display: grid;
-    color: ${colors.gray};
-    }
-
-      @media (max-width: 768px) {
-      align-items: flex-start;
-      padding: 0 10px;
+    div {
+    margin-bottom: 10px;
     }
   }
-
 
   &.follow-us {
     display: flex;
     flex-direction: column;
 
     @media (max-width: 768px) {
-    display: none; /* Hide social icons on mobile */
-  }
-  }
-
-  a {
-    color: ${colors.gray};
-    text-decoration: none;
-
-    &:hover {
-      color: ${colors.white};
+      display: none; /* Hide social icons on mobile */
     }
   }
 
-.reachOut{
+  &.reachOut{
     h2 {
     color: ${colors.darkGray};
   }
@@ -108,18 +101,14 @@ export const FooterTitle = styled.h3`
   }
 `;
 
-export const FooterLink = styled(Link)`
-  text-decoration: none;
-  position: relative;
-  padding: 5px 0;
-
-  &:hover {
-    color: ${colors.white};
-  }
-`;
-
 export const SocialIcon = styled.a`
   text-decoration: none;
+  color: ${colors.gray};
+  text-decoration: none;
+
+    &:hover {
+      color: ${colors.white};
+    }
 
   svg {
     margin: 0;
@@ -159,3 +148,4 @@ export const FooterSignature = styled.div`
     }
   }
 `;
+

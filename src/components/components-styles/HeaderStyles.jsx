@@ -12,8 +12,6 @@ export const HeaderContainer = styled.header`
 `;
 
 export const LogoLink = styled(Link)`
-  display: flex
-  align-items: center;
   margin-top: 10px;
   margin-left: 25px; /* Space between logo and menu */
 
@@ -21,7 +19,6 @@ export const LogoLink = styled(Link)`
     margin-left: 0px;
     padding: 0 30px;  /* Add padding to the sides */
   }
-
 `;
 
 export const LogoImage = styled.img`
@@ -36,11 +33,7 @@ export const NavBar = styled.nav`
   padding: 0 20px;
   max-width: 1020px;
   margin: 0 auto;
-  height: 80px; /* Adjust the height as needed */
-
-   @media (max-width: 768px) {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+  height: 80px;
 `;
 
 export const NavMenu = styled.ul`
@@ -56,11 +49,6 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   margin-right: 40px;
-
-   @media (max-width: 768px) {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
 `;
 
 export const NavLink = styled(Link)`
@@ -95,9 +83,8 @@ export const NavLink = styled(Link)`
       transition: none;
       width: 0;
       height: 0; 
+    }
   }
-}
-
 `;
 
 export const HamburgerIcon = styled.div`
@@ -142,10 +129,9 @@ export const MobileNavMenu = styled.div`
   }
 
   ${NavItem} {
-    margin: 15px 0;  // Adjust vertical spacing between items
+    margin: 5px 0;
     width: 90%;
   }
-
 `;
 
 export const SocialIcon = styled.a`
@@ -169,8 +155,8 @@ export const SocialIcon = styled.a`
 export const SocialIconContainer = styled.div`
   display: flex;
   gap: 30px;
-  justify-content: center;
   margin-top: 20px;
+  padding: 10px 20px;
 `;
 
 
