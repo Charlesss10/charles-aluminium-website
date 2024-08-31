@@ -66,7 +66,7 @@ export const FooterBox = styled.div`
     }
   }
 
-  &.reachOut{
+  .reachOut{
     h2 {
     color: ${colors.darkGray};
   }
