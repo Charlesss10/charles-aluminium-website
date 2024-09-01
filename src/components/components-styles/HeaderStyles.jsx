@@ -104,16 +104,23 @@ export const HamburgerIcon = styled.div`
   }
 `;
 
+
 export const MobileNavMenu = styled.div`
   position: fixed;
   top: 0;
-  left: ${({ menuOpen }) => (menuOpen ? '0' : '-250px')}; /* Hide or show sidebar */
+  left: ${({ 
+  // @ts-ignore
+  menuOpen }) => (menuOpen ? '0' : '-250px')}; /* Hide or show sidebar */
   width: 250px;
   height: 100%;
   background: ${colors.white};
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: ${({ menuOpen }) => (menuOpen ? '1' : '0')};
-  transform: ${({ menuOpen }) => (menuOpen ? 'translateX(0)' : 'translateX(-10px)')};
+  opacity: ${({ 
+  // @ts-ignore
+  menuOpen }) => (menuOpen ? '1' : '0')};
+  transform: ${({ 
+  // @ts-ignore
+  menuOpen }) => (menuOpen ? 'translateX(0)' : 'translateX(-10px)')};
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;

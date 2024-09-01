@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaPhone, FaEnvelope } from 'react-icons/fa';
 import {
   ContactPageContainer,
@@ -21,7 +20,6 @@ function ContactPage() {
           width="100%"
           height="300"
           style={{ border: 0 }}
-          allowFullScreen=""
           loading="lazy"
         ></iframe>
       </MapContainer>

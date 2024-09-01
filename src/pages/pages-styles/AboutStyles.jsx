@@ -14,14 +14,13 @@ export const AboutPageContainer = styled.div`
   }
 `;
 
-export const WhoWeAreContainer = styled.section`
-  margin: 0 auto;
-`;
-
-export const WhoWeAreTitle = styled.h1`
+export const PageHeader = styled.h1`
+  background-color: rgba(72, 209, 204, 0.3);
   color: ${colors.darkGray};
   font-size: 32px;
-  margin-bottom: 20px;
+  padding: 40px;
+  margin-top: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
    @media (max-width: 768px) {
     font-size: 28px;
@@ -43,7 +42,7 @@ export const WhoWeAreContent = styled.div`
 
 export const WhoWeAreText = styled.div`
   flex: 1; /* Takes up half the width of the container */
-  text-align: left; /* Align text to the left */
+  text-align: left;
   line-height: 1.5;
 
    @media (max-width: 768px) {
@@ -71,19 +70,26 @@ export const WhoWeAreImage = styled.img`
 `;
 
 export const MissionStatement = styled.div`
-  margin: 40px 0;
   line-height: 1.5;
   color: ${colors.darkGray};
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 `;
 
 export const VisionStatement = styled.div`
-  margin: 40px 0;
   line-height: 1.5;
   color: ${colors.darkGray};
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 `;
 
 export const ValuesContainer = styled.div`
   display: grid;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
 
@@ -123,6 +129,7 @@ export const TeamContainer = styled.div`
 
 export const CTASection = styled.div`
   background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: ${colors.white};
   text-align: center;
   padding: 20px;

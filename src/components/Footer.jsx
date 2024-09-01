@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaPhone, FaEnvelope } from 'react-icons/fa';
 import {
     FooterOuterContainer,

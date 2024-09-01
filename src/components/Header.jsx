@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { useState, useEffect } from 'react';
+import { FaBars, FaFacebook, FaTimes } from 'react-icons/fa';
 import logo from '../assets/logo.png';
-import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import {  FaInstagram, FaLinkedin } from 'react-icons/fa';
 import {
   HeaderContainer,
   LogoLink,
   LogoImage,
   NavBar,
-  NavMenu,
   NavItem,
   NavLink,
   MobileNavMenu,
   HamburgerIcon,
   SocialIconContainer,
-  SocialIcon
+  SocialIcon,
+  NavMenu
 } from './components-styles/HeaderStyles';
 
 function Header() {
@@ -69,7 +69,9 @@ function Header() {
               </NavItem>
             </NavMenu>
 
-            <MobileNavMenu menuOpen={menuOpen}>
+            <MobileNavMenu 
+            // @ts-ignore
+            menuOpen={menuOpen}>
               {/*Mobile Navigation Menu*/}
               <NavItem>
                 <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
