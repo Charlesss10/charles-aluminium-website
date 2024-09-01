@@ -120,34 +120,3 @@ export const HeroProductsButton = styled.a`
     font-size: 14px;
   }
 `;
-
-export const HeroQuoteButton = styled.a`
-  display: inline-block;
-  padding: 8px 20px;
-  font-size: 16px;
-  color: ${colors.black};
-  background-color: ${colors.lightBlue};
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  animation-delay: 1s; /* Further delayed animation start */
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background-color: ${colors.gray};
-  }
-
-  &:active {
-    transform: translateY(2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-   @media (max-width: 768px) {
-    padding: 7px 15px;
-    font-size: 14px;
-  }
-`;

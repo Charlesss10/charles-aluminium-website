@@ -14,11 +14,12 @@ export const ContactPageContainer = styled.div`
 `;
 
 export const PageHeader = styled.h1`
-  font-size: 32px;
-  font-weight: bold;
+  background-color: rgba(72, 209, 204, 0.3);
   color: ${colors.darkGray};
-  text-align: left;
-  margin-bottom: 20px;
+  font-size: 32px;
+  padding: 40px;
+  margin-top: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 768px) {
     font-size: 28px;
@@ -27,8 +28,8 @@ export const PageHeader = styled.h1`
 
 export const MapContainer = styled.div`
   width: 100%;
-  height: 300px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  margin-top: 50px;
 `;
 
 export const ContactDetailsContainer = styled.div`
@@ -36,7 +37,12 @@ export const ContactDetailsContainer = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
 
+
   .branch{
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
     h2 {
     color: ${colors.darkGray};
   }
@@ -47,23 +53,27 @@ export const ContactDetailsContainer = styled.div`
   };
 
   .reachOut{
-    h2 {
-    color: ${colors.darkGray};
-  }
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
+     h2 {
+     color: ${colors.darkGray};
+     }
     p {
     display: flex;
     margin: 10px 0;
     color: ${colors.gray};
 
-    a {
-    color: ${colors.gray};
-    text-decoration: none;
+     a {
+     color: ${colors.gray};
+     text-decoration: none;
 
-     &:hover {
-     color: ${colors.darkGray};
-     }
+      &:hover {
+      color: ${colors.darkGray};
+      }
     }
-  }
+   }
 
     svg {
       margin-right: 10px;
@@ -72,6 +82,10 @@ export const ContactDetailsContainer = styled.div`
   };
 
   .followUs{
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+
     h2 {
     color: ${colors.darkGray};
   }
