@@ -15,7 +15,7 @@ export const ProductPageContainer = styled.div`
 `;
 
 export const PageHeader = styled.h1`
-  background-color: rgba(72, 209, 204, 0.3);
+  background-color: #f9f9f9;
   color: ${colors.darkGray};
   font-size: 32px;
   padding: 40px;
@@ -23,6 +23,7 @@ export const PageHeader = styled.h1`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 768px) {
+    margin-top: -20px;
     font-size: 28px;
   }
 `;
@@ -62,29 +63,49 @@ export const ProductItem = styled.div`
   }
 `;
 
-export const CTASection = styled.div`
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: ${colors.white};
-  text-align: center;
-  padding: 20px;
-  margin: 40px 0;
-`;
-
-export const CTASectionLink = styled(Link)`
-  color: rgb(240, 240, 240);
-  text-decoration: none;
-  position: relative;
-  padding: 5px 0;
-  text-align: center;
-
-  &:hover {
-    color: ${colors.gray};
-  }
-`
 export const ProductLink = styled(Link)`
   color: rgb(240, 240, 240);
   text-decoration: none;
   position: relative;
   padding: 5px 0;
 `
+
+export const CTASection = styled.div`
+  display: grid;
+  background: linear-gradient(135deg, rgba(72, 209, 204, 0.3), rgba(255, 255, 255, 0.8));
+  color: ${colors.darkGray};
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 40px 20px;
+  margin: 50px 0;
+`;
+
+export const CTASectionLink = styled(Link)`
+  color: ${colors.darkGray};
+  text-decoration: none;
+  position: relative;
+  padding: 10px 0;
+  text-align: center;
+  transition: color 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    color: ${colors.lightBlue};
+    border-color: ${colors.lightBlue};
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: ${colors.lightBlue};
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+`;
