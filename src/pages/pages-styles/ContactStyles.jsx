@@ -14,7 +14,7 @@ export const ContactPageContainer = styled.div`
 `;
 
 export const PageHeader = styled.h1`
-  background-color: rgba(72, 209, 204, 0.3);
+  background-color: #f9f9f9;
   color: ${colors.darkGray};
   font-size: 32px;
   padding: 40px;
@@ -22,6 +22,7 @@ export const PageHeader = styled.h1`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 768px) {
+    margin-top: -20px;
     font-size: 28px;
   }
 `;
@@ -45,7 +46,8 @@ export const ContactDetailsContainer = styled.div`
 
     h2 {
     color: ${colors.darkGray};
-  }
+    }
+
     p {
     line-height: 1.5;
     color: ${colors.gray};
@@ -60,10 +62,11 @@ export const ContactDetailsContainer = styled.div`
      h2 {
      color: ${colors.darkGray};
      }
-    p {
-    display: flex;
-    margin: 10px 0;
-    color: ${colors.gray};
+
+     p {
+     display: flex;
+     margin: 10px 0;
+     color: ${colors.gray};
 
      a {
      color: ${colors.gray};
@@ -88,15 +91,10 @@ export const ContactDetailsContainer = styled.div`
 
     h2 {
     color: ${colors.darkGray};
-  }
+    }
+
     a {
     margin-right: 20px;
-    color: ${colors.gray};
-    text-decoration: none;
-
-    &:hover {
-      color: ${colors.darkGray};
-    }
   };
 
   @media (max-width: 768px) {

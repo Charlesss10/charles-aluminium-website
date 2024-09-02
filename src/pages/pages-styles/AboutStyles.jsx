@@ -15,7 +15,7 @@ export const AboutPageContainer = styled.div`
 `;
 
 export const PageHeader = styled.h1`
-  background-color: rgba(72, 209, 204, 0.3);
+  background-color: #f9f9f9;
   color: ${colors.darkGray};
   font-size: 32px;
   padding: 40px;
@@ -23,6 +23,7 @@ export const PageHeader = styled.h1`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
    @media (max-width: 768px) {
+    margin-top: -20px;
     font-size: 28px;
   }
 `;
@@ -75,6 +76,7 @@ export const MissionStatement = styled.div`
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  margin-bottom: 20px;
 `;
 
 export const VisionStatement = styled.div`
@@ -83,21 +85,29 @@ export const VisionStatement = styled.div`
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  margin-bottom: 20px;
 `;
 
 export const ValuesContainer = styled.div`
   display: grid;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
+
+  h2 {
+    grid-template-columns: 0;
+  }
 
    @media (max-width: 768px) {
     flex-direction: column;
     gap: 20px;
   }
 `;
+
+export const ValuesOuterContainer = styled.div`
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+`
 
 export const Value = styled.div`
   flex: 1;
@@ -128,22 +138,41 @@ export const TeamContainer = styled.div`
 `;
 
 export const CTASection = styled.div`
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: ${colors.white};
+  display: grid;
+  background: linear-gradient(135deg, rgba(72, 209, 204, 0.3), rgba(255, 255, 255, 0.8));
+  color: ${colors.darkGray};
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
-  padding: 20px;
-  margin: 40px 0;
+  padding: 40px 20px;
+  margin: 50px 0;
 `;
 
 export const CTASectionLink = styled(Link)`
-  color: rgb(240, 240, 240);
+  color: ${colors.darkGray};
   text-decoration: none;
   position: relative;
-  padding: 5px 0;
+  padding: 10px 0;
   text-align: center;
+  transition: color 0.3s ease, border-color 0.3s ease;
 
   &:hover {
-    color: ${colors.gray};
+    color: ${colors.lightBlue};
+    border-color: ${colors.lightBlue};
   }
-`
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: ${colors.lightBlue};
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+`;

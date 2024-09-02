@@ -46,15 +46,21 @@ function ContactPage() {
 
         <div className="reachOut">
           <h2>Reach Out</h2>
-          <p><FaPhone size={20} /> +234 80 3407 0479 </p>
+          <p><FaPhone size={20} /> (+234) 8034 070479 </p>
           <p><FaEnvelope size={20} /> <a href="mailto:cigbojionu12@yahoo.com"> cigbojionu12@yahoo.com</a></p>
         </div>
 
-        <div className = "followUs">
-        <h2>Follow Us</h2>
-          <a href="https://www.facebook.com/p/Charles-Aluminium-100064226793845/" target="_blank" rel="noopener noreferrer"><FaFacebook size={30} /></a>
-          <a href="https://www.instagram.com/charles_aluminium_company/" target="_blank" rel="noopener noreferrer"><FaInstagram size={30} /></a>
-          <a href="https://www.linkedin.com/company/charles-aluminium/about/" target="_blank" rel="noopener noreferrer"><FaLinkedin size={30} /></a>
+        <div className="followUs">
+          <h2>Follow Us</h2>
+          <a href="https://www.facebook.com/p/Charles-Aluminium-100064226793845/" target="_blank" rel="noopener noreferrer">
+            <FaFacebook size={30} style={{ color: '#1877F2' }} />
+          </a>
+          <a href="https://www.instagram.com/charles_aluminium_company/" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size={30} style={{ color: '#E4405F' }} />
+          </a>
+          <a href="https://www.linkedin.com/company/charles-aluminium/about/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={30} style={{ color: '#0A66C2' }} />
+          </a>
         </div>
       </ContactDetailsContainer>
 
