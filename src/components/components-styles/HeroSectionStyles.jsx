@@ -1,4 +1,5 @@
 import colors from '../../helper-components/Color';
+import fonts from '../../helper-components/Font';
 import styled, { keyframes } from 'styled-components';
 import heroImage from '../../assets/heroImage.png';
 
@@ -65,12 +66,14 @@ export const HeroContent = styled.div`
 `;
 
 export const WelcomeTextHeader = styled.h1`
+  font-family: ${fonts.font1};
   font-size: 36px;
   margin-bottom: 20px;
   animation-delay: 0.2s; /* Delayed animation start */
 `;
 
 export const WelcomeText = styled.p`
+  font-family: ${fonts.font1};
   font-size: 14px;
   margin-top: -10px;
   animation-delay: 0.4s; /* Further delayed animation start */
@@ -93,6 +96,7 @@ export const HeroButtonContainer = styled.div`
 export const HeroProductsButton = styled.a`
   display: inline-block;
   padding: 8px 20px;
+  font-family: ${fonts.font1};
   font-size: 16px;
   color: ${colors.black};
   background-color: ${colors.lightBlue};
