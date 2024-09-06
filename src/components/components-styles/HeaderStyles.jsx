@@ -1,23 +1,21 @@
 import colors from '../../helper-components/Color';
+import fonts from '../../helper-components/Font';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
-export const HeaderContainer = styled.header`
+export const HeaderContainer = styled.div`
   position: sticky;
   top: 0;
   background: ${colors.white};
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  padding: 0;
-`;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 
-export const LogoLink = styled(Link)`
-  margin-top: 10px;
-  margin-left: 25px; /* Space between logo and menu */
-
-   @media (max-width: 768px) {
-    margin-left: 0px;
-    padding: 0 30px;  /* Add padding to the sides */
+  & > .inner-header {
+    max-width: 1060px;
+    width: 100%;
+    padding: 20px;
   }
 `;
 
@@ -30,10 +28,14 @@ export const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  max-width: 1020px;
   margin: 0 auto;
-  height: 80px;
+  height: 0;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+  padding: 0;
+  height: 40px;
+  }
 `;
 
 export const NavMenu = styled.ul`
@@ -48,12 +50,13 @@ export const NavMenu = styled.ul`
 `;
 
 export const NavItem = styled.li`
-  margin-right: 40px;
+  margin-left: 40px;
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled.a`
   text-decoration: none;
   color: ${colors.gray};
+  font-family: ${fonts.font1};
   font-size: 18px;
   font-weight: 500;
   position: relative;
@@ -78,7 +81,7 @@ export const NavLink = styled(Link)`
     width: 100%;
   }
 
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
     &::after {
       transition: none;
       width: 0;
@@ -86,24 +89,6 @@ export const NavLink = styled(Link)`
     }
   }
 `;
-
-export const HamburgerIcon = styled.div`
-  display: none;
-  cursor: pointer;
-  color: ${colors.gray};
-
-  svg {
-    width: 25px; /* Adjust icon size */
-    height: auto;
-  }
-
-   @media (max-width: 768px) {
-    display: block;
-    margin-right: 0;
-    padding: 0 30px;  /* Add padding to the sides */
-  }
-`;
-
 
 export const MobileNavMenu = styled.div`
   position: fixed;
@@ -138,6 +123,21 @@ export const MobileNavMenu = styled.div`
   ${NavItem} {
     margin: 5px 0;
     width: 90%;
+  }
+`;
+
+export const HamburgerIcon = styled.div`
+  display: none;
+  cursor: pointer;
+  color: ${colors.gray};
+
+  svg {
+    width: 25px; /* Adjust icon size */
+    height: auto;
+  }
+
+   @media (max-width: 768px) {
+    display: block;
   }
 `;
 

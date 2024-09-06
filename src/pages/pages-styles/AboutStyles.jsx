@@ -1,38 +1,49 @@
 import styled from 'styled-components';
 import colors from '../.././helper-components/Color'
-import { Link } from 'react-router-dom';
+import fonts from '../../helper-components/Font';
+
+export const PageHeaderOuterContainer = styled.h2`
+  background-color: ${colors.footerBlack};
+  margin-top: 0;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+`;
+
+export const PageHeader = styled.h2`
+  color: ${colors.lightGray};
+  font-family: ${fonts.font1};
+  font-size: 32px;
+  max-width: 1060px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+`;
 
 export const AboutPageContainer = styled.div`
+  font-family: ${fonts.font1};
   width: 100%;
   max-width: 1060px;
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
-
-   @media (max-width: 768px) {
-    padding: 50px;
-  }
-`;
-
-export const PageHeader = styled.h1`
-  background-color: #f9f9f9;
-  color: ${colors.darkGray};
-  font-size: 32px;
-  padding: 40px;
-  margin-top: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-   @media (max-width: 768px) {
-    margin-top: -20px;
-    font-size: 28px;
-  }
 `;
 
 export const WhoWeAreContent = styled.div`
   display: flex;
   flex-wrap: wrap;
   color: ${colors.darkGray};
+  background-color: #f9f9f9;
+  padding: 20px;
   gap: 20px;
+  margin-bottom: 20px;
   justify-content: space-between; /* Ensures spacing between the columns */
 
    @media (max-width: 768px) {
@@ -55,7 +66,7 @@ export const WhoWeAreImageContainer = styled.div`
   flex: 1; /* Takes up half the width of the container */
   display: flex;
   flex-direction: column;
-  margin-top: 22px;
+  margin-top: 30px;
   gap: 20px;
 
    @media (max-width: 768px) {
@@ -74,7 +85,6 @@ export const MissionStatement = styled.div`
   line-height: 1.5;
   color: ${colors.darkGray};
   background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
 `;
@@ -83,7 +93,6 @@ export const VisionStatement = styled.div`
   line-height: 1.5;
   color: ${colors.darkGray};
   background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
 `;
@@ -105,7 +114,6 @@ export const ValuesContainer = styled.div`
 
 export const ValuesOuterContainer = styled.div`
   background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
 `
 
@@ -138,22 +146,28 @@ export const TeamContainer = styled.div`
 `;
 
 export const CTASection = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(135deg, rgba(72, 209, 204, 0.3), rgba(255, 255, 255, 0.8));
   color: ${colors.darkGray};
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
+  align-items: center;
   padding: 40px 20px;
   margin: 50px 0;
+
+  @media (max-width: 768px) {
+   display: grid;
+  }
 `;
 
-export const CTASectionLink = styled(Link)`
+export const CTASectionLink = styled.a`
   color: ${colors.darkGray};
   text-decoration: none;
   position: relative;
   padding: 10px 0;
   text-align: center;
   transition: color 0.3s ease, border-color 0.3s ease;
+  
 
   &:hover {
     color: ${colors.lightBlue};

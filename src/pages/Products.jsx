@@ -1,7 +1,8 @@
-import productData from '../products/productData';
+import ProductData from '../products/ProductData';
 import {
-    ProductPageContainer,
+    PageHeaderOuterContainer,
     PageHeader,
+    ProductPageContainer,
     Introduction,
     ProductGrid,
     ProductItem,
@@ -12,29 +13,32 @@ import {
 
 const ProductPage = () => {
     return (
-        <ProductPageContainer>
-            <PageHeader>OUR PRODUCTS</PageHeader>
+        <><PageHeaderOuterContainer>
+            <a href='/products' style={{ textDecoration: 'none' }}>
+                <PageHeader>OUR PRODUCTS</PageHeader>
+            </a>
+        </PageHeaderOuterContainer>
+            <ProductPageContainer>
+                <Introduction>
+                    At our company, we strive to provide the highest quality products to meet your needs. Our commitment to excellence ensures you receive the best value for your investment.
+                </Introduction>
 
-            <Introduction>
-                At our company, we strive to provide the highest quality products to meet your needs. Our commitment to excellence ensures you receive the best value for your investment.
-            </Introduction>
+                <ProductGrid>
+                    {ProductData.map((product) => (
+                        <ProductLink href={`/products/${product.name}`}>
+                            <ProductItem>
+                                <img src={product.Image} alt={product.name} />
+                                <h3>{product.name}</h3>
+                            </ProductItem>
+                        </ProductLink>
+                    ))}
+                </ProductGrid>
 
-            <ProductGrid>
-                {productData.map((product) => (
-                    <ProductLink to={`/products/${product.id}`}>
-                        <ProductItem>
-                            <img src={product.Image} alt={product.name} />
-                            <h3>{product.name}</h3>
-                        </ProductItem>
-                    </ProductLink>
-                ))}
-            </ProductGrid>
-
-            <CTASection>
-                <h3>We don’t just provide you with quality products, but also quality services, including installation and post-installation support.</h3>
-                <CTASectionLink to="/services">Learn More About Our Services</CTASectionLink>
-            </CTASection>
-        </ProductPageContainer>
+                <CTASection>
+                    <h3>We don’t just provide you with quality products, but also quality services, including installation and post-installation support.</h3>
+                    <CTASectionLink href="/services">Learn More About Our Services</CTASectionLink>
+                </CTASection>
+            </ProductPageContainer></>
     );
 };
 

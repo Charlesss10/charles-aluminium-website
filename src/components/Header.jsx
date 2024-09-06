@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 import { FaBars, FaFacebook, FaTimes } from 'react-icons/fa';
-import logo from '../assets/logo.png';
-import {  FaInstagram, FaLinkedin } from 'react-icons/fa';
+import logo2 from '../assets/logo2.png';
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 import {
   HeaderContainer,
-  LogoLink,
   LogoImage,
   NavBar,
   NavItem,
@@ -18,6 +17,7 @@ import {
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -41,52 +41,62 @@ function Header() {
 
   return (
     <>
-        <HeaderContainer>
-
+      <HeaderContainer>
+        <div className="inner-header">
           <NavBar>
             {/*Desktop Navigation Menu*/}
-            <LogoLink to="/">
-              <LogoImage src={logo} alt="Charles Aluminium Logo" />
-            </LogoLink>
+            <a href="/">
+              <LogoImage src={logo2} alt="Charles Aluminium Logo" />
+            </a>
             <HamburgerIcon onClick={toggleMenu}>
               {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </HamburgerIcon>
             <NavMenu>
               <NavItem>
-                <NavLink to="/">Home</NavLink>
+                <NavLink href="/">
+                  Home
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/about">About</NavLink>
+                <NavLink href="/about">
+                  About
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/products">Products</NavLink>
+                <NavLink href="/products">
+                  Product
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/services">Services</NavLink>
+                <NavLink href="/services">
+                  Services
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/contact">Contact</NavLink>
+                <NavLink href="/contact">
+                  Contact
+                </NavLink>
               </NavItem>
             </NavMenu>
 
-            <MobileNavMenu 
-            // @ts-ignore
-            menuOpen={menuOpen}>
+            <MobileNavMenu
+              // @ts-ignore
+              menuOpen={menuOpen}>
               {/*Mobile Navigation Menu*/}
               <NavItem>
-                <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
+                <NavLink href="/" onClick={toggleMenu}>Home</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/about" onClick={toggleMenu}>About</NavLink>
+                <NavLink href="/about" onClick={toggleMenu}>About</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/products" onClick={toggleMenu}>Products</NavLink>
+                <NavLink href="/products" onClick={toggleMenu}>Products</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/services" onClick={toggleMenu}>Services</NavLink>
+                <NavLink href="/services" onClick={toggleMenu}>Services</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/contact" onClick={toggleMenu}>Contact</NavLink>
+                <NavLink href="/contact" onClick={toggleMenu}>Contact</NavLink>
               </NavItem>
 
               <SocialIconContainer>
@@ -101,9 +111,9 @@ function Header() {
                 </SocialIcon>
               </SocialIconContainer>
             </MobileNavMenu>
-          </NavBar>   
-
-        </HeaderContainer>
+          </NavBar>
+        </div>
+      </HeaderContainer>
     </>
   );
 }
