@@ -1,4 +1,4 @@
-import ProductData from '../products/ProductData';
+import ProductInfoData from '../products/ProductInfoData';
 import {
     PageHeaderOuterContainer,
     PageHeader,
@@ -24,7 +24,7 @@ const ProductPage = () => {
                 </Introduction>
 
                 <ProductGrid>
-                    {ProductData.map((product) => (
+                    {ProductInfoData.map((product) => (
                         <ProductLink href={`/products/${product.name}`}>
                             <ProductItem>
                                 <img src={product.Image} alt={product.name} />

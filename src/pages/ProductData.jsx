@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import ProductData from '../products/ProductData';
+import ProductInfoData from '../products/ProductInfoData';
 import {
   PageHeaderOuterContainer,
   PageHeader,
@@ -16,9 +16,9 @@ import {
   OtherProductLink
 } from './pages-styles/ProductDataStyles';
 
-const ProductDetail = () => {
+const ProductData = () => {
   const { productName } = useParams();
-  const product = ProductData.find((product) => product.name === productName); // Find the specific product
+  const product = ProductInfoData.find((product) => product.name === productName); // Find the specific product
 
   if (!product) {
     return (
@@ -30,7 +30,7 @@ const ProductDetail = () => {
     );
   }
 
-  const otherProducts = ProductData.filter((p) => p.name !== product.name); // Filter out the current product from the "Other Products" list
+  const otherProducts = ProductInfoData.filter((p) => p.name !== product.name); // Filter out the current product from the "Other Products" list
 
   return (
     <><PageHeaderOuterContainer>
@@ -74,4 +74,4 @@ const ProductDetail = () => {
   );
 };
 
-export default ProductDetail;
+export default ProductData;
