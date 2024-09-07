@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import colors from '../../helper-components/Color';
 import fonts from '../../helper-components/Font';
+import dimensions from '../../helper-components/Dimension';
 
 export const PageHeaderOuterContainer = styled.h2`
   background-color: ${colors.footerBlack};
@@ -14,9 +15,9 @@ export const PageHeaderOuterContainer = styled.h2`
 
 export const PageHeader = styled.h2`
   color: ${colors.lightGray};
-  font-family: ${fonts.font1};
+  font-family: ${fonts.mainFont};
   font-size: 32px;
-  max-width: 1060px;
+  max-width: ${dimensions.pageDimension};
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
@@ -28,9 +29,9 @@ export const PageHeader = styled.h2`
 `;
 
 export const ProductPageContainer = styled.div`
-  font-family: ${fonts.font1};
+  font-family: ${fonts.mainFont};
   width: 100%;
-  max-width: 1060px;
+  max-width: ${dimensions.pageDimension};
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
@@ -40,10 +41,8 @@ export const ProductInfo = styled.div`
   display: flex;
   flex-wrap: wrap;
   color: ${colors.darkGray};
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   gap: 20px;
-  background-color: #f9f9f9;
-  padding: 20px;
   justify-content: space-between; /* Ensures spacing between the columns */
 
    @media (max-width: 768px) {
@@ -80,11 +79,6 @@ export const ProductImage = styled.img`
   height: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow to the image */
 `;
-
-export const OtherProductsOuterContainer = styled.div`
-  background-color: #f9f9f9;
-  padding: 20px;
-`
 
 export const OtherProductsGrid = styled.div`
   display: grid;
@@ -131,6 +125,7 @@ export const CTASection = styled.div`
   align-items: center;
   padding: 40px 20px;
   margin: 50px 0;
+  margin-bottom: 20px;
 
   @media (max-width: 768px) {
    display: grid;

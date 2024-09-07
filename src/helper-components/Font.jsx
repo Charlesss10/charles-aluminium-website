@@ -1,5 +1,5 @@
 const fonts = {
-font1: '"Poppins", sans-serif',
+mainFont: '"Poppins", sans-serif',
 };
   
 export default fonts;
