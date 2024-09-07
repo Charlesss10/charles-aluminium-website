@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import colors from '../.././helper-components/Color'
 import fonts from '../../helper-components/Font';
+import dimensions from '../../helper-components/Dimension';
 
 export const PageHeaderOuterContainer = styled.h2`
   background-color: ${colors.footerBlack};
@@ -14,9 +15,9 @@ export const PageHeaderOuterContainer = styled.h2`
 
 export const PageHeader = styled.h2`
   color: ${colors.lightGray};
-  font-family: ${fonts.font1};
+  font-family: ${fonts.mainFont};
   font-size: 32px;
-  max-width: 1060px;
+  max-width: ${dimensions.pageDimension};
   margin-left: auto;
   margin-right: auto;
   padding: 0 20px;
@@ -28,9 +29,9 @@ export const PageHeader = styled.h2`
 `;
 
 export const AboutPageContainer = styled.div`
-  font-family: ${fonts.font1};
+  font-family: ${fonts.mainFont};
   width: 100%;
-  max-width: 1060px;
+  max-width: ${dimensions.pageDimension};
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
@@ -40,8 +41,6 @@ export const WhoWeAreContent = styled.div`
   display: flex;
   flex-wrap: wrap;
   color: ${colors.darkGray};
-  background-color: #f9f9f9;
-  padding: 20px;
   gap: 20px;
   margin-bottom: 20px;
   justify-content: space-between; /* Ensures spacing between the columns */
@@ -84,23 +83,21 @@ export const WhoWeAreImage = styled.img`
 export const MissionStatement = styled.div`
   line-height: 1.5;
   color: ${colors.darkGray};
-  background-color: #f9f9f9;
-  padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 `;
 
 export const VisionStatement = styled.div`
   line-height: 1.5;
   color: ${colors.darkGray};
-  background-color: #f9f9f9;
-  padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 `;
 
 export const ValuesContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
+  background-color: #f9f9f9;
+  padding: 20px;
 
   h2 {
     grid-template-columns: 0;
@@ -111,11 +108,6 @@ export const ValuesContainer = styled.div`
     gap: 20px;
   }
 `;
-
-export const ValuesOuterContainer = styled.div`
-  background-color: #f9f9f9;
-  padding: 20px;
-`
 
 export const Value = styled.div`
   flex: 1;
@@ -154,6 +146,7 @@ export const CTASection = styled.div`
   align-items: center;
   padding: 40px 20px;
   margin: 50px 0;
+  margin-bottom: 20px;
 
   @media (max-width: 768px) {
    display: grid;
@@ -168,7 +161,6 @@ export const CTASectionLink = styled.a`
   text-align: center;
   transition: color 0.3s ease, border-color 0.3s ease;
   
-
   &:hover {
     color: ${colors.lightBlue};
     border-color: ${colors.lightBlue};

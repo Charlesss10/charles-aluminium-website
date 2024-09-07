@@ -17,6 +17,23 @@ import {
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isShrunk, setIsShrunk] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) { // Change 100 to the scroll distance you prefer
+        setIsShrunk(true);
+      } else {
+        setIsShrunk(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
 
   const toggleMenu = () => {
@@ -41,7 +58,7 @@ function Header() {
 
   return (
     <>
-      <HeaderContainer>
+      <HeaderContainer className={isShrunk ? 'shrunk' : ''}>
         <div className="inner-header">
           <NavBar>
             {/*Desktop Navigation Menu*/}

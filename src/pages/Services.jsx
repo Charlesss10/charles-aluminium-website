@@ -12,7 +12,6 @@ import {
     ServiceItem,
     CTASection,
     CTASectionLink,
-    ServiceOuterContainer
 } from './pages-styles/ServicesStyles';
 
 const ServicesPage = () => {
@@ -36,7 +35,6 @@ const ServicesPage = () => {
                     </IntroImageContainer>
                 </IntroContent>
 
-                <ServiceOuterContainer>
                     <h2>SERVICES</h2>
                     <ServiceGrid>
                         {ServiceData.map(service => (
@@ -46,7 +44,6 @@ const ServicesPage = () => {
                             </ServiceItem>
                         ))}
                     </ServiceGrid>
-                </ServiceOuterContainer>
 
                 <CTASection>
                     <h3>For more information or inquiries, feel free to contact us, and we will be happy to assist you.</h3>

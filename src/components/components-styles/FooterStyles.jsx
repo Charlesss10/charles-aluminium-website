@@ -1,4 +1,5 @@
 import colors from '../../helper-components/Color';
+import dimensions from '../../helper-components/Dimension';
 import fonts from '../../helper-components/Font';
 import styled from 'styled-components';
 
@@ -9,9 +10,8 @@ export const FooterContainer = styled.footer`
   justify-content: center;
 
   & > .inner-footer {
-    max-width: 1060px;
+    max-width: ${dimensions.pageDimension};
     width: 100%;
-    padding: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-content: space-between;
@@ -43,14 +43,14 @@ export const FooterBox = styled.div`
   &.head-office {
     display: flex;
     flex-direction: column;
-    font-family: ${fonts.font1};
+    font-family: ${fonts.mainFont};
 
   }
 
   &.quick-links {
     display: flex;
     flex-direction: column;
-    font-family: ${fonts.font1};
+    font-family: ${fonts.mainFont};
 
 
     div {
@@ -90,7 +90,7 @@ export const FooterBox = styled.div`
 `;
 
 export const FooterTitle = styled.h3`
-  font-family: ${fonts.font1};
+  font-family: ${fonts.mainFont};
   font-size: 25px;
   margin: 20px 0;
   color: ${colors.lightGray};
@@ -125,7 +125,7 @@ export const SocialIconContainer = styled.div`
 export const FooterSignature = styled.div`
   text-align: center;
   color: ${colors.gray};
-  font-family: ${fonts.font1};
+  font-family: ${fonts.mainFont};
   font-size: 14px;
   padding: 15px 0;
   background-color: rgba(0, 0, 0, 0.9);

@@ -8,7 +8,6 @@ import {
   ProductDescription,
   ProductImageContainer,
   ProductImage,
-  OtherProductsOuterContainer,
   OtherProductsGrid,
   OtherProductsItem,
   CTASection,
@@ -50,7 +49,6 @@ const ProductData = () => {
           </ProductImageContainer>
         </ProductInfo>
 
-        <OtherProductsOuterContainer>
           <h2>OTHER PRODUCTS</h2>
           <OtherProductsGrid>
             {otherProducts.map((otherProduct) => (
@@ -62,7 +60,6 @@ const ProductData = () => {
               </OtherProductLink>
             ))}
           </OtherProductsGrid>
-        </OtherProductsOuterContainer>
 
         <CTASection>
           <h3>For more information on how we can serve you, feel free to get in touch with us.</h3>

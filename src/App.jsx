@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Products from './pages/Products';
 import Services from './pages/Services';
 import ProductData from './pages/ProductData';
+import FloatingButton from './helper-components/FloatingButton';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/products/:productName" element={<ProductData />} />
       </Routes>
+      <FloatingButton />
       <Footer />
     </Router>
   );

@@ -15,7 +15,6 @@ import {
   TeamContainer,
   CTASection,
   CTASectionLink,
-  ValuesOuterContainer
 } from './pages-styles/AboutStyles';
 
 function About() {
@@ -72,7 +71,6 @@ function About() {
             we aim to [mention the impact you hope to have on your industry or community].</p>
         </VisionStatement>
 
-        <ValuesOuterContainer>
           <h2>OUR VALUES</h2>
           <ValuesContainer>
             <Value>
@@ -88,7 +86,6 @@ function About() {
               <p>We uphold the highest standards of integrity in all our actions</p>
             </Value>
           </ValuesContainer>
-        </ValuesOuterContainer>
 
         <TeamContainer>
           <img src={CEO} alt="CEO" />
