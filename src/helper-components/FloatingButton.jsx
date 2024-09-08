@@ -31,7 +31,7 @@ const FloatingButton = () => {
   return (
     <Button
       {...{ show: showButton }} onClick={scrollToTop}>
-      <FaChevronUp size={30} />
+      <FaChevronUp />
     </Button>
   );
 };
