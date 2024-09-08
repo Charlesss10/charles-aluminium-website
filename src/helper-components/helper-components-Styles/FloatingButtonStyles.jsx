@@ -41,16 +41,13 @@ export const Button = styled.button`
   text-align: center;
   justify-content: center;
   align-items: center;
-  
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
   ${props => 
 // @ts-ignore
     props.show ? css`
     animation: ${slideUp} 0.5s ease forwards;
   ` : css`
     animation: ${slideDown} 0.5s ease forwards;
-  `}
-
-  &:hover {
-    transform: scale(1.05);
-  }
+  `};
 `;

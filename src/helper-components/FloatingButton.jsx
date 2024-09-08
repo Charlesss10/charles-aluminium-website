@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from './helper-components-Styles/FloatingButtonStyles';
+import { FaChevronUp } from 'react-icons/fa';
 
 const FloatingButton = () => {
   const [showButton, setShowButton] = useState(false);
@@ -30,7 +31,7 @@ const FloatingButton = () => {
   return (
     <Button
       {...{ show: showButton }} onClick={scrollToTop}>
-      <i className="fas fa-chevron-up"></i>
+      <FaChevronUp size={30} />
     </Button>
   );
 };
