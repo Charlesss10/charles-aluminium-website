@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Button } from './helper-components-Styles/FloatingButtonStyles';
+import { FloatingLink } from './helper-components-Styles/FloatingButtonStyles';
 import { FaChevronUp } from 'react-icons/fa';
 
 const FloatingButton = () => {
@@ -21,18 +21,22 @@ const FloatingButton = () => {
     };
   }, []);
 
-  const scrollToTop = () => {
+  const scrollToTop = (e) => {
+    e.preventDefault(); // Since it's an `a` tag, prevent the default link behavior
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
   };
 
-  return (
-    <Button
-      {...{ show: showButton }} onClick={scrollToTop}>
-      <FaChevronUp />
-    </Button>
+return (
+    <FloatingLink
+      href="#top"
+      // @ts-ignore
+      show={showButton}
+      onClick={scrollToTop}>
+      <FaChevronUp size={30} />
+    </FloatingLink>
   );
 };
 

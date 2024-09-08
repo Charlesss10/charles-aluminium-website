@@ -24,7 +24,7 @@ const slideDown = keyframes`
   }
 `;
 
-export const Button = styled.button`
+export const FloatingLink = styled.a`
   position: fixed;
   bottom: 40px;
   right: 20px;
@@ -37,7 +37,6 @@ export const Button = styled.button`
   font-size: 24px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: opacity 0.3s ease;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -45,7 +44,7 @@ export const Button = styled.button`
   transition: transform 0.3s ease, opacity 0.3s ease;
 
   ${props => 
-// @ts-ignore
+    // @ts-ignore
     props.show ? css`
     animation: ${slideUp} 0.5s ease forwards;
   ` : css`
