@@ -14,9 +14,7 @@ import {
 const ProductPage = () => {
     return (
         <><PageHeaderOuterContainer>
-            <a href='/products' style={{ textDecoration: 'none' }}>
-                <PageHeader>OUR PRODUCTS</PageHeader>
-            </a>
+            <PageHeader>OUR PRODUCTS</PageHeader>
         </PageHeaderOuterContainer>
             <ProductPageContainer>
                 <Introduction>

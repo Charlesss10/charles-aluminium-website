@@ -17,9 +17,7 @@ import {
 const ServicesPage = () => {
     return (
         <><PageHeaderOuterContainer>
-            <a href='/services' style={{ textDecoration: 'none' }}>
-                <PageHeader>OUR SERVICES</PageHeader>
-            </a>
+            <PageHeader>OUR SERVICES</PageHeader>
         </PageHeaderOuterContainer>
             <ServicesPageContainer>
                 <IntroContent>
@@ -35,15 +33,15 @@ const ServicesPage = () => {
                     </IntroImageContainer>
                 </IntroContent>
 
-                    <h2>SERVICES</h2>
-                    <ServiceGrid>
-                        {ServiceData.map(service => (
-                            <ServiceItem>
-                                <img src={service.Image} alt={service.name} />
-                                <h3>{service.name}</h3>
-                            </ServiceItem>
-                        ))}
-                    </ServiceGrid>
+                <h2>SERVICES</h2>
+                <ServiceGrid>
+                    {ServiceData.map(service => (
+                        <ServiceItem>
+                            <img src={service.Image} alt={service.name} />
+                            <h3>{service.name}</h3>
+                        </ServiceItem>
+                    ))}
+                </ServiceGrid>
 
                 <CTASection>
                     <h3>For more information or inquiries, feel free to contact us, and we will be happy to assist you.</h3>

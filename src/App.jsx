@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Products from './pages/Products';
 import Services from './pages/Services';
 import ProductData from './pages/ProductData';
-import FloatingButton from './helper-components/FloatingButton';
+import FloatingButton from './components/FloatingButton';
 
 function App() {
   return (

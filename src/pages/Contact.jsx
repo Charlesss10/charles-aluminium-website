@@ -10,9 +10,7 @@ import {
 function ContactPage() {
   return (
     <><PageHeaderOuterContainer>
-      <a href='/contact' style={{ textDecoration: 'none' }}>
-        <PageHeader>CONTACT US</PageHeader>
-      </a>
+      <PageHeader>CONTACT US</PageHeader>
     </PageHeaderOuterContainer>
       <ContactPageContainer>
         <MapContainer>

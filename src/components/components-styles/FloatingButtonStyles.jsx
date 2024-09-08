@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import colors from '../Color';
+import colors from '../../helper-components/Color';
 import { keyframes } from 'styled-components';
 
 export const slideUp = keyframes`

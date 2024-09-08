@@ -33,9 +33,7 @@ const ProductData = () => {
 
   return (
     <><PageHeaderOuterContainer>
-      <a href={`/products/${product.name}`} style={{ textDecoration: 'none' }}>
-        <PageHeader>{product.name}</PageHeader>
-      </a>
+      <PageHeader>{product.name}</PageHeader>
     </PageHeaderOuterContainer>
 
       <ProductPageContainer>

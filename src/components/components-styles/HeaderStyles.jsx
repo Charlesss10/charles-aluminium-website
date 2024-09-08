@@ -12,22 +12,11 @@ export const HeaderContainer = styled.div`
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  transition: all 0.5s ease-in-out; /* Smooth transition for shrinking */
 
   & > .inner-header {
     max-width: ${dimensions.pageDimension};
     width: 100%;
     padding: 20px;
-    transition: padding 0.3s ease-in-out; /* Smooth padding change */
-  }
-
-    /* Shrunk Header Styles */
-  &.shrunk {
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-
-    .inner-header {
-      padding: 10px 20px; /* Shrink padding */
-    }
   }
 `;
 

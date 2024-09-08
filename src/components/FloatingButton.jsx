@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FloatingLink } from './helper-components-Styles/FloatingButtonStyles';
+import { FloatingLink } from './components-styles/FloatingButtonStyles';
 import { FaChevronUp } from 'react-icons/fa';
 
 const FloatingButton = () => {

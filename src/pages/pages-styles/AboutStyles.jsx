@@ -98,6 +98,7 @@ export const ValuesContainer = styled.div`
   gap: 40px;
   background-color: #f9f9f9;
   padding: 20px;
+  margin-bottom: 40px;
 
   h2 {
     grid-template-columns: 0;
@@ -123,17 +124,9 @@ export const Value = styled.div`
 export const TeamContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 20px 0;
 
-  img {
-    width: 150px; /* Adjust the size as needed */
-    height: auto;
-  }
-
-    @media (min-width: 768px) {
-    img {
-      width: 120px;
-    }
+  div {
+  margin-bottom: 20px;
   }
 `;
 

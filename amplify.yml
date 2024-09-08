@@ -16,3 +16,14 @@ frontend:
   cache:
     paths:
       - node_modules/**/*   # Cache dependencies to speed up subsequent builds
+  # Add this section for custom redirects and rewrites
+  customHeaders:
+    - pattern: '**/*'
+      headers:
+        - key: 'Cache-Control'
+          value: 'max-age=0,no-cache,no-store,must-revalidate'
+  
+  redirects:
+    - source: '</^[^.]+$|.(?!(css|js|map|json|ico|png|jpg|jpeg|svg|webmanifest)$)/>'
+      target: /index.html
+      status: 200

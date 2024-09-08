@@ -1,5 +1,4 @@
 import heroImage from '../assets/heroImage.png';
-import CEO from '../assets/CEO.png';
 import {
   PageHeaderOuterContainer,
   PageHeader,
@@ -19,11 +18,10 @@ import {
 
 function About() {
 
+  console.log("About Page");
   return (
     <><PageHeaderOuterContainer>
-      <a href='/about' style={{ textDecoration: 'none' }}>
-        <PageHeader>ABOUT US</PageHeader>
-      </a>
+      <PageHeader>ABOUT US</PageHeader>
     </PageHeaderOuterContainer>
       <AboutPageContainer>
         <WhoWeAreContent>
@@ -87,10 +85,12 @@ function About() {
             </Value>
           </ValuesContainer>
 
+        <h2>OUR TEAM</h2>
         <TeamContainer>
-          <img src={CEO} alt="CEO" />
-          <h3>Engr. Cletus Chuks Igbojionu</h3>
-          <div>CEO, Founder</div>
+          <h3>Engr. Igbojionu Chuks Eboson Cletus</h3>
+          <div>Chief Operating Officer, Founder</div>
+          <h3>Engr. Echezona Okafor</h3>
+          <div>Plant Manager</div>
         </TeamContainer>
 
         <CTASection>
