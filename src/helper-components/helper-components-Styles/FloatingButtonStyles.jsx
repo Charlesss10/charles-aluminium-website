@@ -31,7 +31,7 @@ export const Button = styled.button`
   background-color: ${colors.lightBlue};
   color: white;
   border: none;
-  border-radius: 20%;
+  border-radius: 50%;
   width: 50px;
   height: 50px;
   font-size: 24px;
@@ -39,6 +39,7 @@ export const Button = styled.button`
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: opacity 0.3s ease;
   text-align: center;
+  display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease, opacity 0.3s ease;
