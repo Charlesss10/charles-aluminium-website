@@ -28,11 +28,10 @@ const FloatingButton = () => {
   };
 
   return (
-    <Button 
-// @ts-ignore
-    show={showButton} onClick={scrollToTop}>
+    <Button
+      {...{ show: showButton }} onClick={scrollToTop}>
       <i className="fas fa-chevron-up"></i>
-      </Button>
+    </Button>
   );
 };
 
