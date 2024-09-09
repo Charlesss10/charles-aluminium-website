@@ -18,33 +18,31 @@ function Footer() {
                     <FooterBox className="head-office">
                         <FooterTitle>Head Office</FooterTitle>
                         <div>
-                            <p>
-                                <div>Km 18, Rumuokoro, Airport Road,</div>
-                                <div>Igwuruta, Port Harcourt,</div>
-                                <div>Rivers State, Nigeria</div>
-                            </p>
+                            <p>Km 18, Rumuokoro, Airport Road,</p>
+                            <p>Igwuruta, Port Harcourt,</p>
+                            <p>Rivers State, Nigeria</p>
                         </div>
 
                         <div className="reachOut">
-                            <p><FaPhone size={20} /> +234 80 3407 0479 </p>
-                            <p><FaEnvelope size={20} /> <a href="mailto:cigbojionu12@yahoo.com"> cigbojionu12@yahoo.com</a></p>
+                            <p><FaPhone size={20} /> (+234) </p>
+                            <p><FaEnvelope size={20} /> <a href="mailto:john@domain"> john@domain</a></p>
                         </div>
 
-                        <p>
-                            <div>Mon - Fri: 8:00AM - 5:00PM</div>
-                            <div>Sat: 8:00AM - 2:00PM</div>
-                        </p>
+                        <div>
+                            <p>Mon - Fri: 8:00AM - 5:00PM</p>
+                            <p>Sat: 8:00AM - 2:00PM</p>
+                        </div>
                     </FooterBox>
 
                     <FooterBox className="quick-links">
                         <FooterTitle>Quick Links</FooterTitle>
-                        <p>
-                            <div><NavLink href="/">Home</NavLink> </div>
-                            <div><NavLink href="/about">About</NavLink></div>
-                            <div><NavLink href="/products">Products</NavLink></div>
-                            <div><NavLink href="/services">Services</NavLink></div>
-                            <div><NavLink href="/contact">Contact</NavLink></div>
-                        </p>
+                        <div>
+                            <p><NavLink href="/">Home</NavLink> </p>
+                            <p><NavLink href="/about">About</NavLink></p>
+                            <p><NavLink href="/products">Products</NavLink></p>
+                            <p><NavLink href="/services">Services</NavLink></p>
+                            <p><NavLink href="/contact">Contact</NavLink></p>
+                        </div>
                     </FooterBox>
 
                     <FooterBox className="follow-us">

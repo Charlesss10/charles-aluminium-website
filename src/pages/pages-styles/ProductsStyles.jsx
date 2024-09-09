@@ -3,7 +3,7 @@ import colors from '../../helper-components/Color';
 import fonts from '../../helper-components/Font';
 import dimensions from '../../helper-components/Dimension';
 
-export const PageHeaderOuterContainer = styled.h2`
+export const PageHeaderOuterContainer = styled.div`
   background-color: ${colors.footerBlack};
   margin-top: 0;
   padding: 20px;

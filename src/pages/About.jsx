@@ -18,7 +18,6 @@ import {
 
 function About() {
 
-  console.log("About Page");
   return (
     <><PageHeaderOuterContainer>
       <PageHeader>ABOUT US</PageHeader>

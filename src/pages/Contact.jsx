@@ -27,11 +27,11 @@ function ContactPage() {
         <ContactDetailsContainer>
           <div className="branch">
             <h2>Port Harcourt Branch</h2>
-            <p>
-              <div>Km 18, Rumuokoro, Airport Road,</div>
-              <div>Igwuruta, Port Harcourt,</div>
-              <div>Rivers State, Nigeria</div>
-            </p>
+            <div>
+              <p>Km 18, Rumuokoro, Airport Road,</p>
+              <p>Igwuruta, Port Harcourt,</p>
+              <p>Rivers State, Nigeria</p>
+            </div>
           </div>
           <div className="branch">
             <h2>Orlu Branch</h2>
@@ -45,8 +45,8 @@ function ContactPage() {
 
           <div className="reachOut">
             <h2>Reach Out</h2>
-            <p><FaPhone size={20} /> (+234) 8034 070479 </p>
-            <p><FaEnvelope size={20} /> <a href="mailto:cigbojionu12@yahoo.com"> cigbojionu12@yahoo.com</a></p>
+            <p><FaPhone size={20} /> (+234) </p>
+            <p><FaEnvelope size={20} /> <a href="mailto:john@domain"> john@domain</a></p>
           </div>
 
           <div className="followUs">

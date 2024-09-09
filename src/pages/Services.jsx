@@ -36,7 +36,7 @@ const ServicesPage = () => {
                 <h2>SERVICES</h2>
                 <ServiceGrid>
                     {ServiceData.map(service => (
-                        <ServiceItem>
+                        <ServiceItem key = {service.id}>
                             <img src={service.Image} alt={service.name} />
                             <h3>{service.name}</h3>
                         </ServiceItem>

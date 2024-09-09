@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FaBars, FaFacebook, FaTimes } from 'react-icons/fa';
 import logo2 from '../assets/logo2.png';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
@@ -17,6 +17,7 @@ import {
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -37,6 +38,22 @@ function Header() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  // UseEffect to handle outside click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false); // Close the menu when clicked outside
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // Cleanup event listener
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuRef, setMenuOpen]);
 
   return (
     <>
@@ -78,7 +95,7 @@ function Header() {
               </NavItem>
             </NavMenu>
 
-            <MobileNavMenu
+            <MobileNavMenu ref={menuRef}
               // @ts-ignore
               menuOpen={menuOpen}>
               {/*Mobile Navigation Menu*/}

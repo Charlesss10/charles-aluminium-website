@@ -22,8 +22,8 @@ const ProductPage = () => {
                 </Introduction>
 
                 <ProductGrid>
-                    {ProductInfoData.map((product) => (
-                        <ProductLink href={`/products/${product.name}`}>
+                    {ProductInfoData.map(product => (
+                        <ProductLink key = {product.id} href={`/products/${product.name}`}>
                             <ProductItem>
                                 <img src={product.Image} alt={product.name} />
                                 <h3>{product.name}</h3>

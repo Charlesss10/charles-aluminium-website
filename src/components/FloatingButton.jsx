@@ -7,7 +7,7 @@ const FloatingButton = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) { // Adjust this value as needed
+      if (window.scrollY > 50) {
         setShowButton(true);
       } else {
         setShowButton(false);
@@ -22,7 +22,7 @@ const FloatingButton = () => {
   }, []);
 
   const scrollToTop = (e) => {
-    e.preventDefault(); // Since it's an `a` tag, prevent the default link behavior
+    e.preventDefault();
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -33,7 +33,7 @@ return (
     <FloatingLink
       href="#top"
       // @ts-ignore
-      show={showButton}
+      show={showButton ? 'true' : undefined}
       onClick={scrollToTop}>
       <FaChevronUp size={30} />
     </FloatingLink>

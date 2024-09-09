@@ -49,9 +49,9 @@ const ProductData = () => {
 
           <h2>OTHER PRODUCTS</h2>
           <OtherProductsGrid>
-            {otherProducts.map((otherProduct) => (
-              <OtherProductLink href={`/products/${otherProduct.name}`}>
-                <OtherProductsItem key={otherProduct.name}>
+            {otherProducts.map(otherProduct => (
+              <OtherProductLink key={otherProduct.id} href={`/products/${otherProduct.name}`}>
+                <OtherProductsItem>
                   <img src={otherProduct.Image} alt={otherProduct.name} />
                   <h3>{otherProduct.name}</h3>
                 </OtherProductsItem>

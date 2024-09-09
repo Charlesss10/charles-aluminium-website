@@ -21,7 +21,7 @@ function Home() {
             <HomePageContainer>
                 <WhoWeAreContent>
                     <WhoWeAreText>
-                        <h2>WHO WE ARE</h2>
+                        <h2>ABOUT US</h2>
                         <p>
                             We are Charles Aluminium, a premier supplier of roofing sheets and roofing felt,
                             headquartered in Rivers State with multiple branches throughout Nigeria.
@@ -50,8 +50,8 @@ function Home() {
 
                 <h2>OUR PRODUCTS</h2>
                 <ProductGrid>
-                    {ProductInfoData.map((product) => (
-                        <ProductLink href={`/products/${product.name}`}>
+                    {ProductInfoData.map(product => (
+                        <ProductLink key = {product.id} href={`/products/${product.name}`}>
                             <ProductItem>
                                 <img src={product.Image} alt={product.name} />
                                 <h3>{product.name}</h3>
@@ -63,7 +63,7 @@ function Home() {
                 <h2>OUR SERVICES</h2>
                 <ServiceGrid>
                     {ServiceData.map(service => (
-                        <ServiceItem>
+                        <ServiceItem key = {service.id}>
                             <img src={service.Image} alt={service.name} />
                             <h3>{service.name}</h3>
                         </ServiceItem>
