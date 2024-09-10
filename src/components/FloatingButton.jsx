@@ -33,7 +33,7 @@ return (
     <FloatingLink
       href="#top"
       // @ts-ignore
-      show={showButton ? 'true' : undefined}
+      $show={showButton ? 'true' : undefined}
       onClick={scrollToTop}>
       <FaChevronUp size={30} />
     </FloatingLink>

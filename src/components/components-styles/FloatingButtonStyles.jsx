@@ -45,7 +45,7 @@ export const FloatingLink = styled.a`
 
   ${props => 
     // @ts-ignore
-    props.show ? css`
+    props.$show ? css`
     animation: ${slideUp} 0.5s ease forwards;
   ` : css`
     animation: ${slideDown} 0.5s ease forwards;

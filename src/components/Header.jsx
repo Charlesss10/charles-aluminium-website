@@ -97,7 +97,7 @@ function Header() {
 
             <MobileNavMenu ref={menuRef}
               // @ts-ignore
-              menuOpen={menuOpen}>
+              $menuopen={menuOpen ? 'true' : undefined}>
               {/*Mobile Navigation Menu*/}
               <NavItem>
                 <NavLink href="/" onClick={toggleMenu}>Home</NavLink>
