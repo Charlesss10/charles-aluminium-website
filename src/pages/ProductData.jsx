@@ -25,7 +25,7 @@ const ProductData = () => {
         <a href={`/products`} style={{ textDecoration: 'none' }}>
           <PageHeader>OUR PRODUCTS</PageHeader>
         </a>
-      </PageHeaderOuterContainer><h2>Product not found!</h2></>
+      </PageHeaderOuterContainer><p>Product not found!</p></>
     );
   }
 

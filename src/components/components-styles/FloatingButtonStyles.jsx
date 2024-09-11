@@ -1,28 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import colors from '../../helper-components/Color';
-import { keyframes } from 'styled-components';
-
-export const slideUp = keyframes`
-  0% {
-    transform: translateY(100%); // Start from off-screen (below the view)
-    opacity: 0; // Invisible at the start
-  }
-  100% {
-    transform: translateY(0); // End at the original position
-    opacity: 1; // Fully visible
-  }
-`;
-
-const slideDown = keyframes`
-  0% {
-    transform: translateY(0); // Start at the original position
-    opacity: 1; // Fully visible at the start
-  }
-  100% {
-    transform: translateY(100%); // Slide down off the screen
-    opacity: 0; // Become invisible
-  }
-`;
 
 export const FloatingLink = styled.a`
   position: fixed;
@@ -42,12 +19,15 @@ export const FloatingLink = styled.a`
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease, opacity 0.3s ease;
-
-  ${props => 
-    // @ts-ignore
-    props.$show ? css`
-    animation: ${slideUp} 0.5s ease forwards;
-  ` : css`
-    animation: ${slideDown} 0.5s ease forwards;
-  `};
+  
+  /* Hide initially if $show is false */
+  opacity: ${props => 
+  // @ts-ignore
+  (props.$show ? '1' : '0')};
+  pointer-events: ${props => 
+  // @ts-ignore
+  (props.$show ? 'auto' : 'none')}; /* Disable clicks when hidden */
+  transform: translateY(${props => 
+  // @ts-ignore
+  (props.$show ? '0' : '100%')});
 `;

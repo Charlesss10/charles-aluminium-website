@@ -4,6 +4,7 @@ import fonts from '../../helper-components/Font';
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.div`
+  font-family: ${fonts.mainFont};
   position: sticky;
   top: 0;
   background: ${colors.white};
@@ -20,11 +21,6 @@ export const HeaderContainer = styled.div`
   }
 `;
 
-export const LogoImage = styled.img`
-  width: 120px;
-  height: auto;
-`;
-
 export const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -39,29 +35,38 @@ export const NavBar = styled.nav`
   }
 `;
 
+export const LogoImage = styled.img`
+  width: 120px;
+  height: auto;
+`;
+
 export const NavMenu = styled.ul`
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative; /* To position the dropdown relative to this menu */
 
    @media (max-width: 768px) {
     display: none;
   }
 `;
 
-export const NavItem = styled.li`
-  margin-left: 40px;
-`;
-
 export const NavLink = styled.a`
+  display: block;
   text-decoration: none;
-  color: ${colors.gray};
-  font-family: ${fonts.mainFont};
+  color: ${({ 
+// @ts-ignore
+  $isactive }) => ($isactive ? colors.black : colors.gray)};
   font-size: 18px;
   font-weight: 500;
   position: relative;
   padding: 10px 0;
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &:hover {
     color: ${colors.black};
@@ -70,7 +75,7 @@ export const NavLink = styled.a`
   &::after {
     content: '';
     position: absolute;
-    width: 0%;
+    width: 0;
     height: 2px;
     background-color: ${colors.lightBlue};
     left: 0;
@@ -81,13 +86,55 @@ export const NavLink = styled.a`
   &:hover::after {
     width: 100%;
   }
+`;
+
+export const DropdownContainer = styled(NavMenu)`
+  position: relative;
+  
+  &:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+`;
+
+export const DropdownMenu = styled.ul`
+  position: absolute;
+  top: 100%; /* Position it directly below the parent */
+  background: ${colors.white};
+  list-style: none;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-top: 2px solid ${colors.lightBlue};
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  visibility: hidden; /* Hide the menu initially */
+
+  ${DropdownContainer}:hover & {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  ${NavLink} {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 15px 15px;
+    margin-right: 0;
+    
+    &:hover{
+    background-color: ${colors.lightBlue};
+    }
+
+    &:hover::after {
+    width: 0;
+    }
+  }
 
   @media (max-width: 768px) {
-    &::after {
-      transition: none;
-      width: 0;
-      height: 0; 
-    }
+    display: none;
   }
 `;
 
@@ -97,7 +144,7 @@ export const MobileNavMenu = styled.div`
   left: ${({ 
   // @ts-ignore
   $menuopen }) => ($menuopen ? '0' : '-300px')}; /* Hide or show sidebar */
-  width: 250px;
+  width: 300px;
   height: 100%;
   background: ${colors.white};
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -110,20 +157,17 @@ export const MobileNavMenu = styled.div`
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  padding: 20px;
   list-style: none;
   border-top: 5px solid ${colors.lightBlue};
   z-index: 1001; /* Ensure sidebar is above other content */
 
   ${NavLink} {
-    display: block;
-    padding: 10px 20px;
-    width: 100%;
-  }
+    padding: 20px 15px;
+    margin-right: 0;
 
-  ${NavItem} {
-    margin: 5px 0;
-    width: 90%;
+    &:hover::after {
+    width: 0;
+    }
   }
 `;
 
