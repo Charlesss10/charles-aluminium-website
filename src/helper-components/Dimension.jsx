@@ -1,6 +1,5 @@
 const dimensions = {
-    pageDimension: '1090px'
+    pageDimension: '1200px'
 };
       
 export default dimensions;
-      

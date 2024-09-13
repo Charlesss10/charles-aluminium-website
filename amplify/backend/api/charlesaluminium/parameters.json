@@ -1,5 +1,0 @@
-{
-  "AppSyncApiName": "charlesaluminium",
-  "DynamoDBBillingMode": "PAY_PER_REQUEST",
-  "DynamoDBEnableServerSideEncryption": false
-}

@@ -52,6 +52,15 @@ export const NavMenu = styled.ul`
   }
 `;
 
+export const DropdownContainer = styled(NavMenu)`
+  position: relative;
+  
+  &:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+`;
+
 export const NavLink = styled.a`
   display: block;
   text-decoration: none;
@@ -68,7 +77,8 @@ export const NavLink = styled.a`
     margin-right: 0;
   }
 
-  &:hover {
+  &:hover,
+  ${DropdownContainer}:hover & {
     color: ${colors.black};
   }
 
@@ -85,15 +95,6 @@ export const NavLink = styled.a`
 
   &:hover::after {
     width: 100%;
-  }
-`;
-
-export const DropdownContainer = styled(NavMenu)`
-  position: relative;
-  
-  &:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
   }
 `;
 

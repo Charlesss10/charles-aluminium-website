@@ -27,28 +27,27 @@ function ContactPage() {
         <ContactDetailsContainer>
           <div className="branch">
             <h2>Port Harcourt Branch</h2>
-            <div>
               <p>Km 18, Rumuokoro, Airport Road,</p>
               <p>Igwuruta, Port Harcourt,</p>
               <p>Rivers State, Nigeria</p>
-            </div>
           </div>
           <div className="branch">
             <h2>Orlu Branch</h2>
-            <p>[Branch 2 Address]</p>
+            <p>Km 2, Orlu, Owerri Road,</p>
+            <p>Okporo, Imo State,</p>
+            <p>Nigeria</p>
           </div>
-
           <div className="branch">
             <h2>Uyo Branch</h2>
-            <p>[Branch 3 Address]</p>
+            <p>Old Stadium Road, by Abak Road,</p>
+            <p>Uyo, Akwa-Ibom State,</p>
+            <p>Nigeria</p>
           </div>
-
           <div className="reachOut">
             <h2>Reach Out</h2>
             <p><FaPhone size={20} /> (+234) </p>
             <p><FaEnvelope size={20} /> <a href="mailto:john@domain"> john@domain</a></p>
           </div>
-
           <div className="followUs">
             <h2>Follow Us</h2>
             <a href="https://www.facebook.com/p/Charles-Aluminium-100064226793845/" target="_blank" rel="noopener noreferrer">

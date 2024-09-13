@@ -96,8 +96,7 @@ export const ValuesContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
-  background-color: #f9f9f9;
-  padding: 20px;
+
   margin-bottom: 40px;
 
   h2 {
