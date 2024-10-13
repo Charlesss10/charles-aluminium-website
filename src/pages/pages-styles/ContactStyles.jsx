@@ -45,7 +45,7 @@ export const MapContainer = styled.div`
 
 export const ContactDetailsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 40px;
   margin: 50px 0;
   margin-bottom: 20px;

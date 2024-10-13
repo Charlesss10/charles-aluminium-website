@@ -18,12 +18,13 @@ const ProductPage = () => {
         </PageHeaderOuterContainer>
             <ProductPageContainer>
                 <Introduction>
-                    At our company, we strive to provide the highest quality products to meet your needs. Our commitment to excellence ensures you receive the best value for your investment.
+                    At our company, we strive to provide the highest quality products to meet your needs.
+                    Our commitment to excellence ensures you receive the best value for your investment.
                 </Introduction>
 
                 <ProductGrid>
                     {ProductInfoData.map(product => (
-                        <ProductLink key = {product.id} href={`/products/${product.name}`}>
+                        <ProductLink key={product.id} href={`/products/${product.name}`}>
                             <ProductItem>
                                 <img src={product.Image} alt={product.name} />
                                 <h3>{product.name}</h3>

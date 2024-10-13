@@ -25,7 +25,7 @@ function Footer() {
 
                         <div className="reachOut">
                             <p><FaPhone size={20} /> (+234) </p>
-                            <p><FaEnvelope size={20} /> <a href="mailto:john@domain"> john@domain</a></p>
+                            <p><FaEnvelope size={20} /> <a href="mailto:charlesaluminium@yahoo.com"> charlesaluminium@yahoo.com</a></p>
                         </div>
 
                         <div>
@@ -64,7 +64,7 @@ function Footer() {
             </FooterContainer>
 
             <FooterSignature>
-                © 2024 Charles Aluminium Designed by <a href="https://www.linkedin.com/in/charles-eboson/" target="_blank" rel="noopener noreferrer">Charless10</a>.
+                © 2024 Charles Aluminium Designed by <a href="https://www.linkedin.com/in/charles-eboson/" target="_blank" rel="noopener noreferrer">CharlesTech Innovations</a>.
             </FooterSignature>
         </>
     );

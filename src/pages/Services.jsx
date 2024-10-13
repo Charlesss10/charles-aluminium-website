@@ -1,4 +1,4 @@
-import heroImage from '../assets/heroImage.png';
+import services from '../assets/services.png';
 import ServiceData from '../services/ServiceData';
 import {
     PageHeaderOuterContainer,
@@ -12,6 +12,7 @@ import {
     ServiceItem,
     CTASection,
     CTASectionLink,
+    StyledList,
 } from './pages-styles/ServicesStyles';
 
 const ServicesPage = () => {
@@ -24,19 +25,25 @@ const ServicesPage = () => {
                     <IntroText>
                         <h2>DELIVERING QUALITY AND EXPERTISE</h2>
                         <p>
-                            At our company, we are committed to providing top-notch services tailored to meet your unique needs.
-                            Our team of professionals ensures that every project is handled with precision and care, from initial consultation to final implementation.
+                            At Charles Aluminium, we are dedicated to delivering high-quality services that cater to your specific requirements.
+                            Our team of professionals ensures each project is handled with expertise and attention to detail. We offer the following services:
                         </p>
+                        <StyledList>
+                            <li>Installation: Professional installation of aluminium products, ensuring precision and long-lasting durability.</li>
+                            <li>Maintenance: Regular maintenance services to keep your aluminium installations in optimal condition.</li>
+                            <li>Consultation: Expert consultation to help you select the most suitable aluminium solutions for your needs.</li>
+                            <li>We are committed to providing top-tier service at every stage of your project.</li>
+                        </StyledList>
                     </IntroText>
                     <IntroImageContainer>
-                        <IntroImage src={heroImage} alt="Our Services" />
+                        <IntroImage src={services} alt="Our Services" />
                     </IntroImageContainer>
                 </IntroContent>
 
-                <h2>SERVICES</h2>
+                <h2>OUR SERVICES INCLUDE:</h2>
                 <ServiceGrid>
                     {ServiceData.map(service => (
-                        <ServiceItem key = {service.id}>
+                        <ServiceItem key={service.id}>
                             <img src={service.Image} alt={service.name} />
                             <h3>{service.name}</h3>
                         </ServiceItem>

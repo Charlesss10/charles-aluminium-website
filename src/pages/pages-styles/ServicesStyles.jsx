@@ -46,6 +46,7 @@ export const IntroContent = styled.div`
   justify-content: space-between; /* Ensures spacing between the columns */
 
    @media (max-width: 768px) {
+    gap: 10px;
     flex-direction: column;
     align-items: left;
   }
@@ -61,14 +62,41 @@ export const IntroText = styled.div`
   }
 `;
 
+export const StyledList = styled.ul`
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+
+    &::before {
+      content: '✔';
+      color: ${colors.lightBlue};
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    li {
+    &::before {
+    color: ${colors.lightBlue};
+    }
+  }
+}
+`;
+
 export const IntroImageContainer = styled.div`
-  flex: 1; /* Takes up half the width of the container */
+  flex: 1;
   display: flex;
   flex-direction: column;
   margin-top: 30px;
-  gap: 20px;
 
    @media (max-width: 768px) {
+    margin-top: 0;
     width: 100%;
     align-items: center;
   }
@@ -88,24 +116,17 @@ export const ServiceGrid = styled.div`
 `;
 
 export const ServiceItem = styled.div`
-  border: 1px solid #ddd;
   overflow: hidden;
   text-align: center;
-  transition: transform 0.3s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
 
   img {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 130px;
   }
 
   h3 {
     margin: 10px 0;
     font-size: 1.1rem;
-    color: #333;
   }
 `;
 

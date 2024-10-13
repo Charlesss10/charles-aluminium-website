@@ -46,7 +46,7 @@ function ContactPage() {
           <div className="reachOut">
             <h2>Reach Out</h2>
             <p><FaPhone size={20} /> (+234) </p>
-            <p><FaEnvelope size={20} /> <a href="mailto:john@domain"> john@domain</a></p>
+            <p><FaEnvelope size={20} /> <a href="mailto:charlesaluminium@yahoo.com"> charlesaluminium@yahoo.com</a></p>
           </div>
           <div className="followUs">
             <h2>Follow Us</h2>

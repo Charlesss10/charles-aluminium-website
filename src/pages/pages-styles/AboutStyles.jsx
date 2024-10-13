@@ -37,95 +37,165 @@ export const AboutPageContainer = styled.div`
   box-sizing: border-box;
 `;
 
-export const WhoWeAreContent = styled.div`
+export const MissionVisionContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
   color: ${colors.darkGray};
-  gap: 20px;
+  gap: 60px;
   margin-bottom: 20px;
   justify-content: space-between; /* Ensures spacing between the columns */
 
    @media (max-width: 768px) {
+    gap: 10px;
+    margin-bottom: 10px;
     flex-direction: column;
-    align-items: left;
+  }
+`
+export const MissionStatement = styled.div`
+  flex: 1;
+  line-height: 1.5;
+  text-align: justify;
+  color: ${colors.darkGray};
+  hyphen: auto;
+
+  @media (max-width: 768px) {
+    text-align: left;
+  }
+`;
+
+export const VisionStatement = styled.div`
+  flex: 1;
+  line-height: 1.5;
+  text-align: justify;
+  color: ${colors.darkGray};
+  hyphen: auto;
+
+  @media (max-width: 768px) {
+    text-align: left;
+  }
+`;
+
+export const WhoWeAreContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  color: ${colors.darkGray};
+  gap: 60px;
+  margin-bottom: 20px;
+  justify-content: space-between; /* Ensures spacing between the columns */
+
+   @media (max-width: 768px) {
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-direction: column;
   }
 `;
 
 export const WhoWeAreText = styled.div`
   flex: 1; /* Takes up half the width of the container */
-  text-align: left;
+  text-align: justify;
   line-height: 1.5;
+  hyphen: auto;
 
-   @media (max-width: 768px) {
+  @media (max-width: 768px) {
     width: 100%;
+    text-align: left;
   }
 `;
 
-export const WhoWeAreImageContainer = styled.div`
-  flex: 1; /* Takes up half the width of the container */
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
-  gap: 20px;
-
-   @media (max-width: 768px) {
-    width: 100%;
-    align-items: center;
-  }
-`;
-
-export const WhoWeAreImage = styled.img`
-  width: 100%;
-  height: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow to the image */
-`;
-
-export const MissionStatement = styled.div`
-  line-height: 1.5;
-  color: ${colors.darkGray};
-  margin-bottom: 40px;
-`;
-
-export const VisionStatement = styled.div`
-  line-height: 1.5;
-  color: ${colors.darkGray};
-  margin-bottom: 40px;
-`;
-
-export const ValuesContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-
-  margin-bottom: 40px;
-
-  h2 {
-    grid-template-columns: 0;
-  }
-
-   @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 20px;
-  }
-`;
-
-export const Value = styled.div`
+export const CharlesTech = styled.div`
   flex: 1;
+  text-align: justify;
   line-height: 1.5;
+  hyphen: auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: left;
+  }
+`
+
+export const StyledList = styled.ul`
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+
+    &::before {
+      content: '✔';
+      color: ${colors.lightBlue};
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    li {
+    &::before {
+    color: ${colors.lightBlue};
+    }
+  }
+}
+`;
+
+export const CharlesFeltContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
   color: ${colors.darkGray};
-  margin-right: 40px ;
+  gap: 60px;
+  margin-bottom: 40px;
+  justify-content: space-between;
 
    @media (max-width: 768px) {
-    text-align: left; /* Align text to the left */
+    margin-bottom: 60px;
+    gap: 10px;
+    flex-direction: column;
   }
-`;
+`
+
+export const CharlesFelt = styled.div`
+  flex: 1;
+  text-align: justify;
+  line-height: 1.5;
+  hyphen: auto;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    text-align: left;
+  }
+`
+
+export const CharlesFeltVideo = styled.div`
+  flex: 1;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  video {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 20px;
+  }
+`
 
 export const TeamContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  div {
-  margin-bottom: 20px;
+  img {
+  height: 200px;
   }
 `;
 

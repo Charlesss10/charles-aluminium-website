@@ -51,24 +51,39 @@ export const ProductGrid = styled.div`
 `;
 
 export const ProductItem = styled.div`
+  position: relative;
   border: 1px solid #ddd;
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s;
+  background: linear-gradient(135deg, rgba(72, 209, 204, 0.3), rgba(255, 255, 255, 0.8));
 
   &:hover {
     transform: scale(1.05);
+    background: none;
+
+    img {
+      opacity: 0.7; /* Dim the image */
+    }
   }
 
   img {
+    border-bottom: 1px solid #ddd;
     width: 100%;
-    height: auto;
+    height: 200px;
+    transition: opacity 0.3s ease; /* Smooth dimming effect */
   }
 
   h3 {
     margin: 10px 0;
     font-size: 1.1rem;
-    color: #333;
+    color: ${colors.darkGray};
+  }
+
+  @media (max-width: 768px) {
+  img {
+    height: 250px;
+  }
   }
 `;
 

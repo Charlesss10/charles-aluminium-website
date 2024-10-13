@@ -42,31 +42,32 @@ export const ProductInfo = styled.div`
   flex-wrap: wrap;
   color: ${colors.darkGray};
   margin-bottom: 40px;
-  gap: 20px;
+  gap: 60px;
   justify-content: space-between; /* Ensures spacing between the columns */
 
-   @media (max-width: 768px) {
+  @media (max-width: 768px) {
     flex-direction: column;
+    gap: 10px;
     align-items: left;
   }
 `;
 
 export const ProductDescription = styled.div`
-  flex: 1; /* Takes up half the width of the container */
-  text-align: left;
+  flex: 1;
+  text-align: justify;
   line-height: 1.5;
+  hyphen: auto;
 
-   @media (max-width: 768px) {
+  @media (max-width: 768px) {
     width: 100%;
+    text-align: left;
   }
 `;
 
 export const ProductImageContainer = styled.div`
-  flex: 1; /* Takes up half the width of the container */
+  flex: 1;
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
-  gap: 20px;
 
    @media (max-width: 768px) {
     width: 100%;
@@ -76,9 +77,33 @@ export const ProductImageContainer = styled.div`
 
 export const ProductImage = styled.img`
   width: 100%;
-  height: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow to the image */
+  height: 350px;
+
+  @media (max-width: 768px) {
+    height: 300px;
+  }
 `;
+
+export const CharlesFeltVideo = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  video {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  @media (max-width: 768px) {
+  margin-top: 20px;
+  }
+`
 
 export const OtherProductsGrid = styled.div`
   display: grid;
@@ -88,24 +113,39 @@ export const OtherProductsGrid = styled.div`
 `;
 
 export const OtherProductsItem = styled.div`
+  position: relative;
   border: 1px solid #ddd;
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s;
+  background: linear-gradient(135deg, rgba(72, 209, 204, 0.3), rgba(255, 255, 255, 0.8));
 
   &:hover {
     transform: scale(1.05);
+    background: none;
+
+    img {
+      opacity: 0.7;
+    }
   }
 
   img {
+    border-bottom: 1px solid #ddd;
     width: 100%;
-    height: auto;
+    height: 200px;
+    transition: opacity 0.3s ease;s
   }
 
   h3 {
     margin: 10px 0;
     font-size: 1.1rem;
-    color: #333;
+    color: ${colors.darkGray};
+  }
+
+  @media (max-width: 768px) {
+  img {
+    height: 250px;
+  }
   }
 `;
 
