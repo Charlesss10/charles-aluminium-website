@@ -1,5 +1,14 @@
 # charles-aluminium-website
 
+## App Url (Vercel):
+https://charles-aluminium-website.vercel.app/
+
+## Technologies Used
+[![Node.js](https://img.shields.io/badge/Node.js-%2343853D.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
+![React](https://img.shields.io/badge/react-%2320232a.svg?logo=react&logoColor=%2361DAFB)
+[![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?logo=vercel&logoColor=white)](https://vercel.com)
+[![AWS Amplify](https://img.shields.io/badge/AWS%20Amplify-%23FF9900.svg?logo=Amazon%20AWS&logoColor=white)](https://aws.amazon.com/amplify/)
+
 ## Deploying the Website locally with local host
 Run 'yarn install' or 'npm install' - To Install all dependencies
 'yarn start' - To run the app locally on local host
