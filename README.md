@@ -10,14 +10,14 @@ https://charles-aluminium-website.vercel.app/
 [![AWS Amplify](https://img.shields.io/badge/AWS%20Amplify-%23FF9900.svg?logo=Amazon%20AWS&logoColor=white)](https://aws.amazon.com/amplify/)
 
 ## Deploying the Website locally with local host
-Run 'yarn install' or 'npm install' - To Install all dependencies
-'yarn start' - To run the app locally on local host
+- Run 'yarn install' or 'npm install' - To Install all dependencies
+- Run 'yarn start' - To run the app locally on local host
 
 ## AWS Amplify
 ### Configuration
-search for ~/.aws/credentials - To view all AWS profile credentials present locally on your Pc
-search for ~/.aws/config - To view all AWS profile config present locally on your Pc
-Run 'amplify configure' - To configure amplify on the react app with an existing AWS profile present locally on your Pc
+- search for ~/.aws/credentials - To view all AWS profile credentials present locally on your Pc
+- search for ~/.aws/config - To view all AWS profile config present locally on your Pc
+- Run 'amplify configure' - To configure amplify on the react app with an existing AWS profile present locally on your Pc
 
 ### Initialization
 Run 'amplify init' - To initialize a new AWS Amplify project by setting up the necessary configuration files and linking your local environment to the Amplify backend
