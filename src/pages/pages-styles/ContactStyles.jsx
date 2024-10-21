@@ -35,6 +35,11 @@ export const ContactPageContainer = styled.div`
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
+
+  h2{
+    border-bottom: 2px solid ${colors.lightBlue};
+    padding-bottom: 10px;
+  }
 `;
 
 export const MapContainer = styled.div`

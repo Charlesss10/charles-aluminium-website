@@ -35,6 +35,11 @@ export const ProductPageContainer = styled.div`
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
+
+  h2{
+    border-bottom: 2px solid ${colors.lightBlue};
+    padding-bottom: 10px;
+  }
 `;
 
 export const ProductInfo = styled.div`
@@ -107,7 +112,7 @@ export const CharlesFeltVideo = styled.div`
 
 export const OtherProductsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   margin-bottom: 10px;
 `;
@@ -118,7 +123,6 @@ export const OtherProductsItem = styled.div`
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s;
-  background: linear-gradient(135deg, rgba(72, 209, 204, 0.3), rgba(255, 255, 255, 0.8));
 
   &:hover {
     transform: scale(1.05);
@@ -132,7 +136,7 @@ export const OtherProductsItem = styled.div`
   img {
     border-bottom: 1px solid #ddd;
     width: 100%;
-    height: 200px;
+    height: 350px;
     transition: opacity 0.3s ease;s
   }
 
@@ -140,12 +144,6 @@ export const OtherProductsItem = styled.div`
     margin: 10px 0;
     font-size: 1.1rem;
     color: ${colors.darkGray};
-  }
-
-  @media (max-width: 768px) {
-  img {
-    height: 250px;
-  }
   }
 `;
 

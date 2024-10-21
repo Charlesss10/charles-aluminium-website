@@ -11,6 +11,11 @@ export const HomePageContainer = styled.div`
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
+  
+  h2{
+    border-bottom: 2px solid ${colors.lightBlue};
+    padding-bottom: 10px;
+  }
 `;
 
 export const IntroductionContainer = styled.div`
@@ -92,7 +97,7 @@ export const ProductsContainer = styled.div`
 export const ProductGrid = styled.div`
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 `;
 
@@ -102,7 +107,8 @@ export const ProductItem = styled.div`
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s;
-  background: linear-gradient(135deg, rgba(72, 209, 204, 0.3), rgba(255, 255, 255, 0.8));
+  height: 400px;
+
 
   &:hover {
     transform: scale(1.05);
@@ -116,7 +122,7 @@ export const ProductItem = styled.div`
   img {
     border-bottom: 1px solid #ddd;
     width: 100%;
-    height: 200px;
+    height: 350px;
     transition: opacity 0.3s ease;
   }
 
@@ -127,9 +133,7 @@ export const ProductItem = styled.div`
   }
 
   @media (max-width: 768px) {
-  img {
-    height: 250px;
-  }
+
   }
 `;
 
