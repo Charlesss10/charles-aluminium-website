@@ -37,8 +37,9 @@ export const AboutPageContainer = styled.div`
   box-sizing: border-box;
 
   h2{
-    border-bottom: 2px solid ${colors.lightBlue};
-    padding-bottom: 10px;
+    border-left: 2px solid ${colors.lightBlue};
+    padding-left: 10px;
+    background-color: rgba(211, 211, 211, 0.1);
   }
 `;
 

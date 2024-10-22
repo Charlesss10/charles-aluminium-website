@@ -178,7 +178,7 @@ export const HamburgerIcon = styled.div`
   color: ${colors.gray};
 
   svg {
-    width: 25px; /* Adjust icon size */
+    width: 30px;
     height: auto;
   }
 

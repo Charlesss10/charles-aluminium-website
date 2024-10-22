@@ -6,7 +6,7 @@ export const FloatingLink = styled.a`
   bottom: 40px;
   right: 20px;
   background-color: ${colors.lightBlue};
-  color: white;
+  color: ${colors.lightGray};
   border: none;
   border-radius: 50%;
   width: 50px;

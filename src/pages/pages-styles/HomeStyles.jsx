@@ -13,8 +13,9 @@ export const HomePageContainer = styled.div`
   box-sizing: border-box;
   
   h2{
-    border-bottom: 2px solid ${colors.lightBlue};
-    padding-bottom: 10px;
+    border-left: 2px solid ${colors.lightBlue};
+    padding-left: 10px;
+    background-color: rgba(211, 211, 211, 0.1);
   }
 `;
 
@@ -162,23 +163,23 @@ export const CharlesFeltVideo = styled.div`
 
 export const ServiceGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin-bottom: 20px;
+  gap: 20px;
 `;
 
 export const ServiceItem = styled.div`
   overflow: hidden;
-  text-align: center;
 
   img {
-    width: 200px;
-    height: 130px;
+    width: 140px;
+    height: 120px;
   }
 
   h3 {
-    margin: 10px 0;
+    margin: -5px 0;
     font-size: 1.1rem;
+    padding: 15px;
   }
 `;
 

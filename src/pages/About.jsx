@@ -112,7 +112,7 @@ function About() {
         </TeamContainer>
 
         <CTASection>
-          <h3>For Further Information</h3>
+          <h3>For more enquiries</h3>
           <CTASectionLink href="/contact">Get in Touch</CTASectionLink>
         </CTASection>
 
