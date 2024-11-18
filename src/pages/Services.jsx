@@ -51,7 +51,7 @@ const ServicesPage = () => {
                 </ServiceGrid>
 
                 <CTASection>
-                    <h3>For more information or inquiries, feel free to contact us, and we will be happy to assist you.</h3>
+                    <h3>For more information or enquiries, feel free to contact us, and we will be happy to assist you.</h3>
                     <CTASectionLink href="/contact">Contact Us</CTASectionLink>
                 </CTASection>
             </ServicesPageContainer></>
