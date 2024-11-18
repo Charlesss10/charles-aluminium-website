@@ -3,7 +3,7 @@ import colors from '../../helper-components/Color';
 import fonts from '../../helper-components/Font';
 import dimensions from '../../helper-components/Dimension';
 
-export const PageHeaderOuterContainer = styled.h2`
+export const PageHeaderOuterContainer = styled.div`
   background-color: ${colors.footerBlack};
   margin-top: 0;
   padding: 20px;
@@ -35,6 +35,12 @@ export const ServicesPageContainer = styled.div`
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
+
+  h2{
+    border-left: 2px solid ${colors.lightBlue};
+    padding-left: 10px;
+    background-color: rgba(211, 211, 211, 0.1);
+  }
 `;
 
 export const IntroContent = styled.div`
@@ -46,6 +52,7 @@ export const IntroContent = styled.div`
   justify-content: space-between; /* Ensures spacing between the columns */
 
    @media (max-width: 768px) {
+    gap: 10px;
     flex-direction: column;
     align-items: left;
   }
@@ -61,14 +68,41 @@ export const IntroText = styled.div`
   }
 `;
 
+export const StyledList = styled.ul`
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+
+    &::before {
+      content: '✔';
+      color: ${colors.lightBlue};
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    li {
+    &::before {
+    color: ${colors.lightBlue};
+    }
+  }
+}
+`;
+
 export const IntroImageContainer = styled.div`
-  flex: 1; /* Takes up half the width of the container */
+  flex: 1;
   display: flex;
   flex-direction: column;
   margin-top: 30px;
-  gap: 20px;
 
    @media (max-width: 768px) {
+    margin-top: 0;
     width: 100%;
     align-items: center;
   }
@@ -82,30 +116,23 @@ export const IntroImage = styled.img`
 
 export const ServiceGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-bottom: 20px;
   gap: 20px;
-  margin-bottom: 10px;
 `;
 
 export const ServiceItem = styled.div`
-  border: 1px solid #ddd;
   overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
 
   img {
-    width: 100%;
-    height: auto;
+    width: 140px;
+    height: 120px;
   }
 
   h3 {
-    margin: 10px 0;
+    margin: -5px 0;
     font-size: 1.1rem;
-    color: #333;
+    padding: 15px;
   }
 `;
 

@@ -12,7 +12,7 @@ function HeroSection() {
         <Hero>
             <HeroContent>
                 <WelcomeTextHeader>Welcome to Charles Aluminium</WelcomeTextHeader>
-                <WelcomeText>Your Partner in Quality Aluminium Products and Nigeria's Leading Roofing Experts. Quality, durability, and excellence in every project.</WelcomeText>
+                <WelcomeText>Your Partner in Quality Aluminium Products and Nigeria's Leading Roofing and Bituminous Felting Experts. Quality, durability, and excellence in every project.</WelcomeText>
                 <HeroButtonContainer>
                     <HeroProductsButton href="/products">Explore our Products </HeroProductsButton>
                 </HeroButtonContainer>

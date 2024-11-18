@@ -3,7 +3,7 @@ import colors from '../.././helper-components/Color'
 import fonts from '../../helper-components/Font';
 import dimensions from '../../helper-components/Dimension';
 
-export const PageHeaderOuterContainer = styled.h2`
+export const PageHeaderOuterContainer = styled.div`
   background-color: ${colors.footerBlack};
   margin-top: 0;
   padding: 20px;
@@ -35,6 +35,12 @@ export const ContactPageContainer = styled.div`
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
+
+  h2{
+    border-left: 2px solid ${colors.lightBlue};
+    padding-left: 10px;
+    background-color: rgba(211, 211, 211, 0.1);
+  }
 `;
 
 export const MapContainer = styled.div`
@@ -45,7 +51,7 @@ export const MapContainer = styled.div`
 
 export const ContactDetailsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 40px;
   margin: 50px 0;
   margin-bottom: 20px;

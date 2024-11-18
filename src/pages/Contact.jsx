@@ -10,9 +10,7 @@ import {
 function ContactPage() {
   return (
     <><PageHeaderOuterContainer>
-      <a href='/contact' style={{ textDecoration: 'none' }}>
-        <PageHeader>CONTACT US</PageHeader>
-      </a>
+      <PageHeader>CONTACT US</PageHeader>
     </PageHeaderOuterContainer>
       <ContactPageContainer>
         <MapContainer>
@@ -29,28 +27,27 @@ function ContactPage() {
         <ContactDetailsContainer>
           <div className="branch">
             <h2>Port Harcourt Branch</h2>
-            <p>
-              <div>Km 18, Rumuokoro, Airport Road,</div>
-              <div>Igwuruta, Port Harcourt,</div>
-              <div>Rivers State, Nigeria</div>
-            </p>
+              <p>Km 18, Rumuokoro, Airport Road,</p>
+              <p>Igwuruta, Port Harcourt,</p>
+              <p>Rivers State, Nigeria</p>
           </div>
           <div className="branch">
             <h2>Orlu Branch</h2>
-            <p>[Branch 2 Address]</p>
+            <p>Km 2, Orlu, Owerri Road,</p>
+            <p>Okporo, Imo State,</p>
+            <p>Nigeria</p>
           </div>
-
           <div className="branch">
             <h2>Uyo Branch</h2>
-            <p>[Branch 3 Address]</p>
+            <p>Old Stadium Road, by Abak Road,</p>
+            <p>Uyo, Akwa-Ibom State,</p>
+            <p>Nigeria</p>
           </div>
-
           <div className="reachOut">
             <h2>Reach Out</h2>
-            <p><FaPhone size={20} /> (+234) 8034 070479 </p>
-            <p><FaEnvelope size={20} /> <a href="mailto:cigbojionu12@yahoo.com"> cigbojionu12@yahoo.com</a></p>
+            <p><FaPhone size={20} /> (+234) 91 6349 1771 </p>
+            <p><FaEnvelope size={20} /> <a href="mailto:charlesaluminium@yahoo.com"> charlesaluminium@yahoo.com</a></p>
           </div>
-
           <div className="followUs">
             <h2>Follow Us</h2>
             <a href="https://www.facebook.com/p/Charles-Aluminium-100064226793845/" target="_blank" rel="noopener noreferrer">

@@ -3,7 +3,7 @@ import colors from '../../helper-components/Color';
 import fonts from '../../helper-components/Font';
 import dimensions from '../../helper-components/Dimension';
 
-export const PageHeaderOuterContainer = styled.h2`
+export const PageHeaderOuterContainer = styled.div`
   background-color: ${colors.footerBlack};
   margin-top: 0;
   padding: 20px;
@@ -35,6 +35,12 @@ export const ProductPageContainer = styled.div`
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
+
+  h2{
+    border-left: 2px solid ${colors.lightBlue};
+    padding-left: 10px;
+    background-color: rgba(211, 211, 211, 0.1);
+  }
 `;
 
 export const Introduction= styled.p`
@@ -45,30 +51,39 @@ export const Introduction= styled.p`
 
 export const ProductGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   margin-bottom: 10px;
 `;
 
 export const ProductItem = styled.div`
+  position: relative;
   border: 1px solid #ddd;
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s;
+  height: 400px;
 
   &:hover {
     transform: scale(1.05);
+    background: none;
+
+    img {
+      opacity: 0.7; /* Dim the image */
+    }
   }
 
   img {
+    border-bottom: 1px solid #ddd;
     width: 100%;
-    height: auto;
+    height: 350px;
+    transition: opacity 0.3s ease; /* Smooth dimming effect */
   }
 
   h3 {
     margin: 10px 0;
     font-size: 1.1rem;
-    color: #333;
+    color: ${colors.darkGray};
   }
 `;
 

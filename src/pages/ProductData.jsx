@@ -1,5 +1,8 @@
 import { useParams } from 'react-router-dom';
 import ProductInfoData from '../products/ProductInfoData';
+// @ts-ignore
+import feltVideo from '../assets/feltVideo.mp4';
+import feltVideoPoster from '../assets/feltVideoPoster.png';
 import {
   PageHeaderOuterContainer,
   PageHeader,
@@ -12,7 +15,8 @@ import {
   OtherProductsItem,
   CTASection,
   CTASectionLink,
-  OtherProductLink
+  OtherProductLink,
+  CharlesFeltVideo
 } from './pages-styles/ProductDataStyles';
 
 const ProductData = () => {
@@ -25,7 +29,7 @@ const ProductData = () => {
         <a href={`/products`} style={{ textDecoration: 'none' }}>
           <PageHeader>OUR PRODUCTS</PageHeader>
         </a>
-      </PageHeaderOuterContainer><h2>Product not found!</h2></>
+      </PageHeaderOuterContainer><p>Product not found!</p></>
     );
   }
 
@@ -33,9 +37,7 @@ const ProductData = () => {
 
   return (
     <><PageHeaderOuterContainer>
-      <a href={`/products/${product.name}`} style={{ textDecoration: 'none' }}>
-        <PageHeader>{product.name}</PageHeader>
-      </a>
+      <PageHeader>{product.name}</PageHeader>
     </PageHeaderOuterContainer>
 
       <ProductPageContainer>
@@ -44,22 +46,32 @@ const ProductData = () => {
             <h2>DESCRIPTION</h2>
             <p>{product.description}</p>
           </ProductDescription>
+
           <ProductImageContainer>
             <ProductImage src={product.Image} alt={product.name} />
           </ProductImageContainer>
+          
+          {product.name === 'Charles Roof Felt Membrane' && (
+            <CharlesFeltVideo>
+              <video controls width="100%" poster= {feltVideoPoster}>
+                <source src={feltVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </CharlesFeltVideo>
+          )}
         </ProductInfo>
 
-          <h2>OTHER PRODUCTS</h2>
-          <OtherProductsGrid>
-            {otherProducts.map((otherProduct) => (
-              <OtherProductLink href={`/products/${otherProduct.name}`}>
-                <OtherProductsItem key={otherProduct.name}>
-                  <img src={otherProduct.Image} alt={otherProduct.name} />
-                  <h3>{otherProduct.name}</h3>
-                </OtherProductsItem>
-              </OtherProductLink>
-            ))}
-          </OtherProductsGrid>
+        <h2>OTHER PRODUCTS</h2>
+        <OtherProductsGrid>
+          {otherProducts.map(otherProduct => (
+            <OtherProductLink key={otherProduct.id} href={`/products/${otherProduct.name}`}>
+              <OtherProductsItem>
+                <img src={otherProduct.Image} alt={otherProduct.name} />
+                <h3>{otherProduct.name}</h3>
+              </OtherProductsItem>
+            </OtherProductLink>
+          ))}
+        </OtherProductsGrid>
 
         <CTASection>
           <h3>For more information on how we can serve you, feel free to get in touch with us.</h3>

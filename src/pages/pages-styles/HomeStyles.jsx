@@ -11,112 +11,175 @@ export const HomePageContainer = styled.div`
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
+  
+  h2{
+    border-left: 2px solid ${colors.lightBlue};
+    padding-left: 10px;
+    background-color: rgba(211, 211, 211, 0.1);
+  }
 `;
 
-export const WhoWeAreContent = styled.div`
+export const IntroductionContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 60px;
   margin-bottom: 40px;
   justify-content: space-between; /* Ensures spacing between the columns */
 
    @media (max-width: 768px) {
+    gap: 10px;
     flex-direction: column;
     align-items: left;
   }
 `;
 
-export const WhoWeAreText = styled.div`
-  flex: 1; /* Takes up half the width of the container */
-  text-align: left;
+export const AboutUs = styled.div`
+  flex: 1;
+  text-align: justify;
   line-height: 1.5;
+  hyphens: auto;
 
-   @media (max-width: 768px) {
+  @media (max-width: 768px) {
     width: 100%;
+    text-align: left;
   }
 `;
 
-export const WhoWeAreImageContainer = styled.div`
-  flex: 1; /* Takes up half the width of the container */
+export const MissionVisionContainer = styled.div`
+  flex: 1;
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
-  gap: 20px;
+  margin-bottom: 20px;
+  justify-content: space-between; /* Ensures spacing between the columns */
 
    @media (max-width: 768px) {
-    width: 100%;
-    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-direction: column;
+  }
+`
+export const MissionStatement = styled.div`
+  flex: 1;
+  line-height: 1.5;
+  text-align: justify;
+  hyphens: auto;
+
+  @media (max-width: 768px) {
+    text-align: left;
   }
 `;
 
-export const WhoWeAreImage = styled.img`
-  width: 100%;
-  height: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow to the image */
+export const VisionStatement = styled.div`
+  flex: 1;
+  line-height: 1.5;
+  text-align: justify;
+  hyphens: auto;
+
+  @media (max-width: 768px) {
+    text-align: left;
+  }
 `;
 
+export const ProductsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin-bottom: 60px;
+  text-align: justify;
+  justify-content: space-between; /* Ensures spacing between the columns */
+
+   @media (max-width: 768px) {
+    gap: 10px;
+    flex-direction: column;
+    align-items: left;
+  }
+`
+
 export const ProductGrid = styled.div`
+  flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  margin-bottom: 40px;
 `;
 
 export const ProductItem = styled.div`
+  position: relative;
   border: 1px solid #ddd;
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s;
+  height: 400px;
+
 
   &:hover {
     transform: scale(1.05);
+    background: none;
+
+    img {
+      opacity: 0.7;
+    }
   }
 
   img {
+    border-bottom: 1px solid #ddd;
     width: 100%;
-    height: auto;
+    height: 350px;
+    transition: opacity 0.3s ease;
   }
 
   h3 {
     margin: 10px 0;
     font-size: 1.1rem;
-    color: #333;
+    color: ${colors.darkGray};
+  }
+
+  @media (max-width: 768px) {
+
   }
 `;
 
 export const ProductLink = styled.a`
-  color: rgb(240, 240, 240);
   text-decoration: none;
   position: relative;
   padding: 5px 0;
 `
 
+export const CharlesFeltVideo = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  video {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+  }
+`
+
 export const ServiceGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin-bottom: 20px;
+  gap: 20px;
 `;
 
 export const ServiceItem = styled.div`
-  border: 1px solid #ddd;
   overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
 
   img {
-    width: 100%;
-    height: auto;
+    width: 140px;
+    height: 120px;
   }
 
   h3 {
-    margin: 10px 0;
+    margin: -5px 0;
     font-size: 1.1rem;
-    color: #333;
+    padding: 15px;
   }
 `;
 
