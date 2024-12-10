@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "amplify-dev-env": "amplify env checkout dev",
-    "github-dev-env": "git checkout dev"
+    "amplify-main-env": "amplify env checkout main"
   },
   "eslintConfig": {
     "extends": [
