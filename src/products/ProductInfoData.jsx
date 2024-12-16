@@ -1,74 +1,71 @@
-import charlesFelt from './images/charlesFelt.png';
+import charlesFelt from './images/charlesFelt_2.png';
 import charlestech from './images/charlestech.png';
 import metcopo from './images/metcopo.png';
 import stepTile from './images/stepTile.png';
 import regularRoofSheets from './images/regularRoofSheets.png';
+import thermal_insulation from './images/thermal_insulation.png';
+import cameroon from './images/cameroon_2.png'
+import stone_coated from './images/stone_coated.png'
 
 const productInfoData = [
   {
     id: 1,
-    name: 'Charlestech Roof Tiles Sheets',
-    Image: charlestech,
-    description: `CHARLESTECH ROOF TILES from Charles Aluminium represent our commitment 
-      to roofing excellence in Nigeria. Combining the aesthetic appeal of steel stone-coated 
-      roofing with practical benefits, these tiles resist color fading, 
-      ensuring a vibrant appearance over time. They are lighter than traditional 
-      steel stone-coated alternatives, facilitating easier and more efficient installation. 
-      Their superior color longevity and resistance to algae growth maintain their attractiveness 
-      and functionality. Additionally, the water runoff from CHARLESTECH ROOF TILES 
-      is safe and non-hazardous, promoting a healthier environment. 
-      Proudly manufactured locally, our tiles help conserve foreign exchange reserves 
-      and bolster the Nigerian economy. With CHARLESTECH ROOF TILES, you invest in a durable, 
-      safe, and locally crafted roofing solution.`,
+    name: 'Thermal Insulation Roof Sheets',
+    Image: thermal_insulation,
+    description: `Designed to reduce heat transfer, these sheets provide superior thermal efficiency, 
+    keeping buildings cooler in hot climates. They are durable, lightweight, and easy to install, 
+    making them a cost-effective solution for energy savings. Ideal for both residential and commercial applications.`,
   },
   {
     id: 2,
-    name: 'Regular Roof Sheets',
-    Image: regularRoofSheets,
-    description: `REGULAR ROOF SHEETS from Charles Aluminium offer a practical and reliable solution 
-      for everyday roofing needs. Designed with durability in mind, these sheets are crafted to withstand 
-      harsh weather conditions while maintaining their structural integrity and appearance over time. 
-      Their lightweight design makes them easy to install, reducing labor costs and time on-site. 
-      The sheets provide excellent protection against rust and corrosion, ensuring long-lasting performance. 
-      In addition, Regular Roof Sheets are engineered to promote safe, non-hazardous water runoff, contributing 
-      to a healthier living environment. With REGULAR ROOF SHEETS, you get a cost-effective, resilient roofing 
-      solution suitable for a variety of applications.`,
+    name: 'Stone Coated Roof Sheets',
+    Image: stone_coated,
+    description: `These premium roofing sheets combine the strength of steel with the elegance of natural stone. 
+    Resistant to weather and corrosion, they offer long-lasting protection with a sophisticated finish. 
+    Perfect for homeowners seeking durability without compromising on style.`,
   },
   {
     id: 3,
-    name: 'Steptile Roof Sheets',
-    Image: stepTile,
-    description: `STEPTILE ROOF SHEETS from Charles Aluminium blend classic aesthetics 
-      with advanced roofing performance. Crafted for exceptional durability, 
-      these roof sheets resist color fading and wear, maintaining their vibrant appearance over time. 
-      Their lightweight design simplifies installation and handling, while their resistance to algae growth 
-      ensures long-lasting visual appeal and functionality. The sheets are engineered to provide safe, 
-      non-hazardous water runoff, contributing to a healthier environment. With STEPTILE ROOF SHEETS, 
-      you benefit from a roofing solution that combines elegance, durability, and superior craftsmanship.`,
+    name: 'Regular Roof Sheets',
+    Image: regularRoofSheets,
+    description: `Affordable and reliable, these roofing sheets are a versatile choice for various construction needs. 
+    With a straightforward design and robust build, they provide dependable shelter. An excellent option for basic roofing projects.`,
   },
   {
     id: 4,
-    name: 'Metcopo Roof Sheets',
-    Image: metcopo,
-    description: `METCOPO ROOF SHEETS from Charles Aluminium deliver a sophisticated and durable roofing solution. 
-      These sheets are crafted to offer exceptional resilience against environmental factors, with advanced technology 
-      ensuring long-lasting color retention and resistance to wear. Their lightweight nature makes them easy to handle and install, 
-      while their design helps prevent algae growth, maintaining both functionality and visual appeal. 
-      METCOPO ROOF SHEETS are also engineered to ensure safe, non-harmful water runoff, contributing to a cleaner and healthier environment. 
-      Choose METCOPO ROOF SHEETS for a blend of modern elegance, enduring strength, and high-quality performance.`,
+    name: 'Charlestech Roof Tiles Sheets',
+    Image: charlestech,
+    description: `Locally manufactured in Nigeria, these tiles blend steel stone-coated beauty with exceptional practicality. 
+    Lightweight, colorfast, and resistant to algae, they ensure long-lasting appeal. A sustainable roofing choice supporting the local economy and environment.`,
   },
   {
     id: 5,
+    name: 'Cameroon Roof Sheets',
+    Image: cameroon,
+    description: `These high-quality roofing sheets are celebrated for their robustness and weather resistance. 
+    Suitable for diverse climates, they offer excellent durability and an attractive finish. A trusted choice for homes and businesses across regions.`,
+  },
+  {
+    id: 6,
+    name: 'Steptile Roof Sheets',
+    Image: stepTile,
+    description: `Crafted for both function and style, these sheets feature a step-tile design that mimics traditional tiles. 
+    Offering enhanced aesthetics with modern durability, they are ideal for homes seeking a polished and unique look. Easy to install and maintain.`,
+  },
+  {
+    id: 7,
+    name: 'Metcopo Roof Sheets',
+    Image: metcopo,
+    description: `Known for their wavy design, these sheets provide a sleek, contemporary appearance.
+    Strong and weather-resistant, they are a popular choice for residential and commercial roofing. Their lightweight nature ensures easier handling and installation.`,
+  },
+  {
+    id: 8,
     name: 'Charles Roof Felt Membrane',
     Image: charlesFelt,
-    description: `We proudly introduce our CHARLES ROOF FELT MEMBRANE, a high-quality
-      bituminous roofing solution designed specifically for aluminium roofing sheets. 
-      Unlike imported alternatives, which are typically designed for decking and retain 
-      a polyethylene layer on both sides, our locally-produced membrane is crafted without polyethylene, 
-      ensuring a stronger adhesion to aluminium surfaces. This key feature effectively seals nail holes 
-      and minimizes the risk of leaks, providing long-lasting protection for your roof.
-      With CHARLES ROOF FELT MEMBRANE, you can trust in a durable, leak-free roofing solution tailored for the unique needs of aluminium roofing.`,
-  },
+    description: `A reliable underlayment solution locally manufactured in Nigeria, 
+    this felt membrane offers superior waterproofing and protection against leaks. 
+    Durable and flexible, it enhances the longevity of the roofing system. Essential for safeguarding roofs in harsh weather conditions.`,
+  }  
 ];
-
 export default productInfoData;
