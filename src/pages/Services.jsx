@@ -44,7 +44,6 @@ const ServicesPage = () => {
                 <ServiceGrid>
                     {ServiceData.map(service => (
                         <ServiceItem key={service.id}>
-                            <img src={service.Image} alt={service.name} />
                             <h3>{service.name}</h3>
                         </ServiceItem>
                     ))}

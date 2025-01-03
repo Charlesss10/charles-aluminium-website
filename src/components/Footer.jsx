@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaLinkedin, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaPhone, FaEnvelope } from 'react-icons/fa';
 import {
     FooterContainer,
     FooterBox,
@@ -48,9 +48,9 @@ function Footer() {
                     <FooterBox className="follow-us">
                         <FooterTitle>Follow Us</FooterTitle>
                         <SocialIconContainer>
-                            <SocialIcon href="https://www.facebook.com/p/Charles-Aluminium-100064226793845/" target="_blank">
+                            {/*<SocialIcon href="https://www.facebook.com/p/Charles-Aluminium-100064226793845/" target="_blank">
                                 <FaFacebook size={24} />
-                            </SocialIcon>
+                            </SocialIcon>*/}
                             <SocialIcon href="https://www.instagram.com/charles_aluminium_company/" target="_blank">
                                 <FaInstagram size={24} />
                             </SocialIcon>

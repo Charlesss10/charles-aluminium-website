@@ -65,20 +65,7 @@ export const ContactDetailsContainer = styled.div`
     }
 
     p {
-    line-height: 1.5;
-    color: ${colors.gray};
-    }
-  };
-
-  .reachOut{
-    background-color: #f9f9f9;
-    padding: 20px;
-
-     h2 {
-     color: ${colors.darkGray};
-     }
-
-     p {
+     line-height: 1.5;
      display: flex;
      margin: 10px 0;
      color: ${colors.gray};
@@ -90,8 +77,12 @@ export const ContactDetailsContainer = styled.div`
       &:hover {
       color: ${colors.darkGray};
       }
+     }
     }
-   }
+
+    .reachOut{
+    margin-top: 20px;
+    }
 
     svg {
       margin-right: 10px;

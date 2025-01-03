@@ -28,16 +28,16 @@ function Home() {
                     <AboutUs>
                         <h2>ABOUT US</h2>
                         <p>
-                            We are Charles Aluminium, a premier supplier of roofing sheets and roofing felt, headquartered in Rivers State,
-                            with multiple branches throughout Nigeria. Our dedication to excellence and drive for innovation empowers us to
+                            We are Charles Aluminium, a premier supplier of roofing sheets and roofing felt, headquartered in Rivers State, Nigeria
+                            with multiple branches across the country. Our dedication to excellence and drive for innovation empowers us to
                             provide top-quality solutions that cater to the varied needs of our customers.
                         </p>
                         <p>
-                            Charles Aluminium was founded in 2005 by Engr. Chuks Cletus Eboson Igbojionu with the vision of providing aluminium
-                            roofing sheets to the low-income class in Nigeria through technological innovations in roofing patterns.
-                            Over the years, we have evolved from catering primarily to this segment with short-span aluminium sheets,
-                            to expanding our offerings with long-span aluminium sheets, leveraging over 23 years of industry experience
-                            as a Production Manager and Chief Engineer at one of Nigeria's leading Aluminium Rolling Mills.
+                            Charles Aluminium, founded in 2005 by Engineer Chuks Cletus Eboson Igbojionu, was established with the mission of making
+                            aluminium roofing sheets affordable for low-income households in Nigeria. The company began by specializing in short-span
+                            aluminium sheets, introducing innovative roofing patterns to meet customer needs. Over time, it expanded its offerings
+                            to include long-span aluminium sheets, leveraging Engineer Igbojionu’s extensive expertise gained over 23 years as a Production
+                            Manager and Chief Engineer at one of Nigeria’s leading Aluminium Rolling Mills.
                         </p>
                     </AboutUs>
 
@@ -84,7 +84,6 @@ function Home() {
                 <ServiceGrid>
                     {ServiceData.map(service => (
                         <ServiceItem key={service.id}>
-                            <img src={service.Image} alt={service.name} />
                             <h3>{service.name}</h3>
                         </ServiceItem>
                     ))}
