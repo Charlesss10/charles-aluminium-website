@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaLinkedin, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaPhone, FaEnvelope } from 'react-icons/fa';
 import {
   PageHeaderOuterContainer,
   PageHeader,
@@ -26,33 +26,44 @@ function ContactPage() {
 
         <ContactDetailsContainer>
           <div className="branch">
-            <h2>Port Harcourt Branch</h2>
+            <div>
+              <h2>Port Harcourt Branch (HQ)</h2>
               <p>Km 18, Rumuokoro, Airport Road,</p>
               <p>Igwuruta, Port Harcourt,</p>
               <p>Rivers State, Nigeria</p>
+            </div>
+            <div className="reachOut">
+              <p><FaPhone size={20} /> (+234) 91 6349 1771 </p>
+              <p><FaEnvelope size={20} /> <a href="mailto:charlesaluminium@yahoo.com"> charlesaluminium@yahoo.com</a></p>
+            </div>
           </div>
           <div className="branch">
-            <h2>Orlu Branch</h2>
-            <p>Km 2, Orlu, Owerri Road,</p>
-            <p>Okporo, Imo State,</p>
-            <p>Nigeria</p>
+            <div>
+              <h2>Orlu Branch</h2>
+              <p>Km 2, Orlu, Owerri Road,</p>
+              <p>Okporo, Imo State,</p>
+              <p>Nigeria</p>
+            </div>
+            <div className="reachOut">
+              <p><FaPhone size={20} /> (+234) 90 6798 8466 </p>
+            </div>
           </div>
           <div className="branch">
-            <h2>Uyo Branch</h2>
-            <p>Old Stadium Road, by Abak Road,</p>
-            <p>Uyo, Akwa-Ibom State,</p>
-            <p>Nigeria</p>
-          </div>
-          <div className="reachOut">
-            <h2>Reach Out</h2>
-            <p><FaPhone size={20} /> (+234) 91 6349 1771 </p>
-            <p><FaEnvelope size={20} /> <a href="mailto:charlesaluminium@yahoo.com"> charlesaluminium@yahoo.com</a></p>
+            <div>
+              <h2>Uyo Branch</h2>
+              <p>Old Stadium Road, by Abak Road,</p>
+              <p>Uyo, Akwa-Ibom State,</p>
+              <p>Nigeria</p>
+            </div>
+            <div className="reachOut">
+              <p><FaPhone size={20} /> (+234) 80 8118 2659 </p>
+            </div>
           </div>
           <div className="followUs">
             <h2>Follow Us</h2>
-            <a href="https://www.facebook.com/p/Charles-Aluminium-100064226793845/" target="_blank" rel="noopener noreferrer">
+            {/*<a href="https://www.facebook.com/p/Charles-Aluminium-100064226793845/" target="_blank" rel="noopener noreferrer">
               <FaFacebook size={30} style={{ color: '#1877F2' }} />
-            </a>
+            </a>*/}
             <a href="https://www.instagram.com/charles_aluminium_company/" target="_blank" rel="noopener noreferrer">
               <FaInstagram size={30} style={{ color: '#E4405F' }} />
             </a>

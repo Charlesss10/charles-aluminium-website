@@ -2,12 +2,10 @@ import charlesFelt from './images/charlesFelt_2.png';
 import charlestech from './images/charlestech.png';
 import metcopo from './images/metcopo.png';
 import stepTile from './images/stepTile.png';
-import regularRoofSheets from './images/regularRoofSheets.png';
-import thermal_insulation from './images/thermal_insulation.png';
 import cameroon from './images/cameroon_2.png'
-import stone_coated from './images/stone_coated.png'
 
 const productInfoData = [
+  /*
   {
     id: 1,
     name: 'Thermal Insulation Roof Sheets',
@@ -31,6 +29,7 @@ const productInfoData = [
     description: `Affordable and reliable, these roofing sheets are a versatile choice for various construction needs. 
     With a straightforward design and robust build, they provide dependable shelter. An excellent option for basic roofing projects.`,
   },
+  */
   {
     id: 4,
     name: 'Charlestech Roof Tiles Sheets',

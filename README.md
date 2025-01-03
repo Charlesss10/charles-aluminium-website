@@ -1,7 +1,7 @@
 # charles-aluminium-website
 
-## App Url (Vercel):
-https://charles-aluminium-website.vercel.app/
+## Website Url (Vercel):
+https://www.charlesaluminium.com/
 
 ## Technologies Used
 [![Node.js](https://img.shields.io/badge/Node.js-%2343853D.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
