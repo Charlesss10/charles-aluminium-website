@@ -131,7 +131,7 @@ export const ServiceItem = styled.div`
 
   h3 {
     margin: -5px 0;
-    font-size: 1.1rem;
+    font-size: 18px;
     padding: 15px;
   }
 `;

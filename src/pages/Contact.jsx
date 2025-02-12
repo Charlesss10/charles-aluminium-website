@@ -5,9 +5,45 @@ import {
   ContactPageContainer,
   MapContainer,
   ContactDetailsContainer,
+  ContactFormContainer
 } from './pages-styles/ContactStyles';
+import React from 'react';
+import axios from 'axios';
 
 function ContactPage() {
+  const [formData, setFormData] = React.useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(
+        '/api/sendEmail',
+        formData, // formData is sent directly here
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
+      if (response.data.success) {
+        alert(response.data.message || "Message sent successfully!");
+        setFormData({ name: "", phone: "", email: "", message: "" });
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error.response?.data || error);
+      alert("An error occurred. Please try again.");
+    }
+  };
+
   return (
     <><PageHeaderOuterContainer>
       <PageHeader>CONTACT US</PageHeader>
@@ -59,6 +95,86 @@ function ContactPage() {
               <p><FaPhone size={20} /> (+234) 80 8118 2659 </p>
             </div>
           </div>
+        </ContactDetailsContainer>
+
+        <h1>Send Us A Message</h1>
+        <ContactFormContainer>
+          <form onSubmit={handleSubmit}>
+            <div className="row">
+              <div className="name">
+                <p>
+                  <span>
+                    <input
+                      size={40}
+                      maxLength={400}
+                      aria-required="true"
+                      aria-invalid="false"
+                      placeholder="Name*"
+                      value={formData.name}
+                      type="text"
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      name="your-name"
+                    />
+                  </span>
+                </p>
+              </div>
+              <div className="phone">
+                <p>
+                  <span>
+                    <input
+                      size={40}
+                      maxLength={400}
+                      aria-invalid="false"
+                      placeholder="Phone"
+                      value={formData.phone}
+                      type="text"
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      name="your-phone"
+                    />
+                  </span>
+                </p>
+              </div>
+              <div className="email">
+                <p>
+                  <span>
+                    <input
+                      size={40}
+                      maxLength={400}
+                      aria-required="true"
+                      aria-invalid="false"
+                      placeholder="Email*"
+                      value={formData.email}
+                      type="email"
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      name="your-email"
+                    />
+                  </span>
+                </p>
+              </div>
+              <div className="yourMessage">
+                <p>
+                  <span>
+                    <textarea
+                      cols={40}
+                      rows={10}
+                      maxLength={2000}
+                      aria-invalid="false"
+                      placeholder="Your Message*"
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      name="your-message"
+                    ></textarea>
+                  </span>
+                </p>
+              </div>
+              <div className="sendMessage">
+                <button type="submit">
+                  Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+
           <div className="followUs">
             <h2>Follow Us</h2>
             {/*<a href="https://www.facebook.com/p/Charles-Aluminium-100064226793845/" target="_blank" rel="noopener noreferrer">
@@ -71,8 +187,7 @@ function ContactPage() {
               <FaLinkedin size={30} style={{ color: '#0A66C2' }} />
             </a>
           </div>
-        </ContactDetailsContainer>
-
+        </ContactFormContainer>
       </ContactPageContainer></>
   );
 }
