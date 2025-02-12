@@ -132,10 +132,6 @@ export const ProductItem = styled.div`
     font-size: 1.1rem;
     color: ${colors.darkGray};
   }
-
-  @media (max-width: 768px) {
-
-  }
 `;
 
 export const ProductLink = styled.a`
@@ -178,9 +174,7 @@ export const ServiceItem = styled.div`
 
   h3 {
     margin: -5px 0;
-    font-size: 1.1rem;
+    font-size: 18px;
     padding: 15px;
   }
 `;
-
-

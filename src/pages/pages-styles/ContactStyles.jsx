@@ -36,6 +36,10 @@ export const ContactPageContainer = styled.div`
   padding: 20px;
   box-sizing: border-box;
 
+  h1 {
+    margin-top: 50px;
+  }
+
   h2{
     border-left: 2px solid ${colors.lightBlue};
     padding-left: 10px;
@@ -90,9 +94,49 @@ export const ContactDetailsContainer = styled.div`
     }
   };
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+`;
+
+export const ContactFormContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 40px;
+  margin-bottom: 20px;
+
+ .row {
+    flex-wrap: wrap;
+    margin-top: -15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .sendMessage {
+    flex-wrap: wrap;
+
+    button {
+    height: 40px;
+    width: 180px;
+    cursor: pointer;
+    }
+  }
+
+  input,
+  textarea {
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-family: ${fonts.mainFont};
+  }
+
   .followUs{
     background-color: #f9f9f9;
     padding: 20px;
+    margin-bottom: 59px;
 
     h2 {
     color: ${colors.darkGray};
@@ -105,5 +149,6 @@ export const ContactDetailsContainer = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 20px;
+    margin-bottom: 20px;
   }
 `;
